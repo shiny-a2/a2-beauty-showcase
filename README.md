@@ -1,8 +1,14 @@
 # A2 Beauty
 
-[Open A2 Beauty](https://beauty.amiraliyaghouti.com) · Release 0.7.0
+[Open A2 Beauty](https://beauty.amiraliyaghouti.com) · Release 0.8.0
 
 A2 Beauty connects customer booking, specialist schedules and salon management in independent salon workspaces. Customer records and follow-ups use the shared A2 CRM domain.
+
+## Managers for individual service lines
+
+The salon owner can give a manager booking access to selected services. Appointment lists, totals, details, changes and return-customer selection follow that choice. New services do not silently expand access. Changing a manager's scope closes their old sessions; notifications also recheck the current service grant.
+
+This mode supports booking operations. Full CRM records, campaigns, staff schedules, account administration and salon-wide reports stay with authorized salon-wide managers because customer and specialist records can be shared across services. First-time customers book themselves or use an authorized salon-wide manager. The interface makes the selected scope visible and prevents stale forms from restoring older grants.
 
 ## Editable profiles, connected customer records
 
@@ -40,13 +46,15 @@ The full Persian calendar supports the ninety-day booking horizon. Appointment f
 
 ## Validation and boundaries
 
-For 0.7, 98 Beauty tests and six shared Core tests passed without skips. New coverage includes tenant and permission boundaries, competing edits, access changes while a request is waiting, repeat submissions and complete rollback when CRM synchronization fails. Existing booking, notification, scheduling and marketing backend suites also passed.
+For 0.8, 107 Beauty tests and six shared Core tests passed without skips. New checks cover cross-salon service references, owner/delegate boundaries, scoped counts and writes, retries after access changes, a request waiting while authority changes, historical inbox filtering and skipped out-of-scope Push. Existing booking, account/profile, CRM, scheduling, notification and marketing backend suites also passed.
 
-Local browser validation passed 116 states/journeys across light/dark and desktop/mobile: 52 profile and CRM states, 24 account states and forty booking journeys. Tests included keyboard focus, stale-edit recovery, a closed dialog receiving a late response and unusually long specialist text. The observed biography overflow and stale account heading were fixed. A browser upgrade from the previous app worker retained an unsaved draft.
+Local browser validation passed 120 states across light/dark and desktop/mobile: 44 scoped-manager states, 52 profile/CRM states and 24 account states. Interactive errors, disabled permissions, focus, onboarding and persisted scope changes were inspected. The previous app worker was replaced without losing an unsaved draft. A tested source fallback denies restricted manager panels rather than granting broader access.
 
-After activation, all 52 profile and CRM states passed over public HTTPS in both themes and screen sizes. Anonymous access to all three profile routes was denied. Tests used isolated synthetic salons and actual HTTP/database operations, with no real customer appointment, payment or external message. Published assets matched the reviewed release. Earlier maintenance, access/notification and marketing browser evidence belongs to the preceding release and was not counted as rerun coverage here.
+All 44 scoped-manager browser states also passed over public HTTPS after activation. Tests used isolated synthetic salons and actual HTTP/database operations, without real customer appointments, financial records or external messages. Published assets matched the reviewed release. Physical-device Push receipt and graphics performance are separate acceptance checks.
 
-Kavenegar template settings are available, but SMS transport and OTP login remain disconnected. Verified account recovery, line-specific manager access, payment processing, subscription billing, commission settlement, multi-branch chains and platform-wide administration remain future work. Current manager permissions apply across their salon. Physical iOS/Android Push receipt and device GPU performance are not established by browser tests. Calendar files require manual import and do not synchronize later changes.
+The owner has requested the full commercial edition: configurable subscriptions, staff commissions, multiple branches and platform administration. Development continues; those capabilities are not part of this release. Commission calculations will use collected service amounts after discounts/refunds. Subscription prices are unset, so plans will remain unpriced drafts until configured and activated.
+
+Kavenegar template settings are available, but SMS transport and OTP login remain disconnected. Verified account recovery, line-specific CRM ownership and the commercial capabilities listed above remain unfinished. SMS/OTP and real payment transport are not connected. Physical iOS/Android Push receipt and device GPU performance are not established by browser tests. Calendar files require manual import and do not synchronize later changes.
 
 This repository contains public product notes only. Private application source, infrastructure configuration, keys and customer data are not published here. Validation records observed behavior, not a guarantee of availability, security or marketing results.
 
