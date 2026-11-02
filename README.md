@@ -1,8 +1,14 @@
 # A2 Beauty
 
-[Open A2 Beauty](https://beauty.amiraliyaghouti.com) · Release 0.8.0
+[Open A2 Beauty](https://beauty.amiraliyaghouti.com) · Release 0.9.0
 
 A2 Beauty connects customer booking, specialist schedules and salon management in independent salon workspaces. Customer records and follow-ups use the shared A2 CRM domain.
+
+## Collections and staff commissions
+
+Authorized managers can issue appointment bills with discounts, record manual collections/refunds, configure a percentage or fixed commission for each specialist/service, and record settlements already made to staff. Commission is based on money collected for completed services after discounts/refunds. Bills keep their original rule, so later rate changes do not rewrite past calculations. A refund after settlement can leave a negative balance to carry forward; the application does not withdraw funds.
+
+Financial events retain their history. Unpaid bills can be voided before any collection, repeated submissions do not duplicate money, and excess collections, refunds or settlements are rejected. Refund forms distinguish reducing a fee from returning money while the fee remains due. CRM links an authorized manager to the exact customer's bills; CRM access alone does not reveal financial amounts. Staff need an explicit grant to read only their own commission statement. Manual records are not verified gateway payments and do not transfer money.
 
 ## Managers for individual service lines
 
@@ -46,15 +52,15 @@ The full Persian calendar supports the ninety-day booking horizon. Appointment f
 
 ## Validation and boundaries
 
-For 0.8, 107 Beauty tests and six shared Core tests passed without skips. New checks cover cross-salon service references, owner/delegate boundaries, scoped counts and writes, retries after access changes, a request waiting while authority changes, historical inbox filtering and skipped out-of-scope Push. Existing booking, account/profile, CRM, scheduling, notification and marketing backend suites also passed.
+For 0.9, 122 Beauty tests and six shared Core tests passed without skips. Coverage includes exact monetary calculations, discounts/refunds, stored commission rules, duplicate/concurrent submissions, tenant and role denials, revoked sessions, CRM financial visibility and safe failure rollback. Existing booking, CRM, profile, scheduling, notification and marketing suites also passed.
 
-Local browser validation passed 120 states across light/dark and desktop/mobile: 44 scoped-manager states, 52 profile/CRM states and 24 account states. Interactive errors, disabled permissions, focus, onboarding and persisted scope changes were inspected. The previous app worker was replaced without losing an unsaved draft. A tested source fallback denies restricted manager panels rather than granting broader access.
+Local browser validation passed 192 states across light/dark and desktop/mobile: 72 financial states, 52 profile/CRM states, 24 account states and 44 service-scoped manager states. Screenshots and interactive states were inspected. Migration reruns preserved financial records, the runtime could not edit or delete financial events, and the previous app worker was replaced without losing an unsaved draft. A tested source fallback retained records and existing booking/CRM behavior while making financial panels unavailable.
 
-All 44 scoped-manager browser states also passed over public HTTPS after activation. Tests used isolated synthetic salons and actual HTTP/database operations, without real customer appointments, financial records or external messages. Published assets matched the reviewed release. Physical-device Push receipt and graphics performance are separate acceptance checks.
+All 72 financial browser states also passed over public HTTPS after activation. These tests used isolated synthetic salons and actual HTTP/database operations, including explicitly simulated financial records. No real purchase, money transfer or external message occurred. All 23 published assets matched the reviewed release. Physical-device Push receipt and graphics performance remain separate acceptance checks.
 
-The owner has requested the full commercial edition: configurable subscriptions, staff commissions, multiple branches and platform administration. Development continues; those capabilities are not part of this release. Commission calculations will use collected service amounts after discounts/refunds. Subscription prices are unset, so plans will remain unpriced drafts until configured and activated.
+The full commercial expansion continues with configurable salon subscriptions, multiple branches and platform administration. These capabilities are not included in this release. Subscription prices remain unset; plans will remain unpriced drafts until configured and activated.
 
-Kavenegar template settings are available, but SMS transport and OTP login remain disconnected. Verified account recovery, line-specific CRM ownership and the commercial capabilities listed above remain unfinished. SMS/OTP and real payment transport are not connected. Physical iOS/Android Push receipt and device GPU performance are not established by browser tests. Calendar files require manual import and do not synchronize later changes.
+Kavenegar template settings are available, but SMS transport and OTP login remain disconnected. Verified account recovery, line-specific CRM ownership and the remaining commercial capabilities are unfinished. Real payment transport is not connected. Physical iOS/Android Push receipt and device GPU performance are not established by browser tests. Calendar files require manual import and do not synchronize later changes.
 
 This repository contains public product notes only. Private application source, infrastructure configuration, keys and customer data are not published here. Validation records observed behavior, not a guarantee of availability, security or marketing results.
 
