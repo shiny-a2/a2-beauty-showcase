@@ -1,8 +1,16 @@
 # A2 Beauty
 
-[Open A2 Beauty](https://beauty.amiraliyaghouti.com) · Release 0.10.0
+[Open A2 Beauty](https://beauty.amiraliyaghouti.com) · Release 0.11.1
 
 A2 Beauty connects customer booking, specialist schedules and salon management in independent salon workspaces. Customer records and follow-ups use the shared A2 CRM domain.
+
+## Owner-approved branch workspaces
+
+Owners can organize multiple salons, invite an existing salon and enter its workspace after its owner approves the access. Each branch keeps its own customers, appointments, CRM and finances. Its owner chooses the permissions, can change them later or disconnect the organization; the home owner cannot expand those permissions.
+
+Delegated sessions are separate from the branch owner's account and depend on the home owner's current session. Old branch sessions close when a grant changes. The interface offers a return to the home salon after access is withdrawn, without exposing its password or granting the branch session owner authority. Invitations expire and can be revoked; they are not sent externally.
+
+CRM, appointment notifications and scheduled marketing use the current branch grant. Revocation pauses scheduled campaign work from that delegated account. Internal campaign tasks already created remain recorded. Organization switching does not merge customer databases or confer platform access.
 
 ## Platform plans and subscription records
 
@@ -10,7 +18,7 @@ A separate management workspace organizes salon plans and subscription periods. 
 
 Plans can remain drafts with no price. An unset price cannot be activated, and changing a plan does not rewrite previously recorded subscription terms. Operators can record activation, renewal, suspension, resumption and cancellation with version checks and retained history. A salon owner sees only that salon's terms in their account.
 
-These are administrative subscription records. They do not charge a card, certify payment or automatically cut off salon access when a period expires or is suspended. No production price or paid subscription has been configured. Multi-branch access is the next commercial milestone.
+These are administrative subscription records. They do not charge a card, certify payment or automatically cut off salon access when a period expires or is suspended. No production price or paid subscription has been configured.
 
 ## Collections and staff commissions
 
@@ -60,15 +68,15 @@ The full Persian calendar supports the ninety-day booking horizon. Appointment f
 
 ## Validation and boundaries
 
-For 0.10, 132 Beauty tests and six shared Core tests passed without skips. New cases cover operator/salon separation, single-use setup, unpriced activation denial, stale and concurrent updates, preserved subscription terms, revoked operator sessions and failure rollback. Existing financial, booking, CRM, profile, scheduling, notification and marketing backend suites also passed.
+For 0.11, 144 Beauty tests and six shared Core tests passed without skips. Branch cases cover owner consent, foreign-salon denials, explicit grants, separate delegated identity, revoked and expired sessions, queued financial/CRM writes, worker authority, invitation reuse and failure rollback. Existing financial, platform, booking, profile, scheduling and marketing backend suites also passed.
 
-Forty-eight local platform browser states passed across light/dark and desktop/mobile. Setup, draft forms, errors, focus, subscription history, independent salon sessions and owner summaries were exercised and screenshots inspected. Offline setup/reissue, restricted database privileges, migration reruns and source fallback were also checked. The previous app worker was replaced without losing an unsaved draft.
+Seventy-two local branch browser states and 24 account-login states passed across light/dark and desktop/mobile. The branch flows include invitation errors, consent, keyboard focus, restricted navigation, grant changes, financial/CRM boundaries, safe return home and disconnection. Screenshots were inspected; no page errors or horizontal overflow remained. Migration reruns, restricted database privileges and the previous source fallback were checked. The app-worker upgrade retained an unsaved draft.
 
-After activation, all 26 published assets matched the reviewed release. The public HTTPS platform login rendered in four theme/width combinations and protected routes denied anonymous access. Authenticated platform flows were tested locally; the production operator account awaits its owner's password setup and acceptance. No production subscription, real purchase, money transfer or external message was created by these checks. The 0.9 release previously passed 192 local browser states and 72 public HTTPS financial states; those counts are historical, not new 0.10 browser coverage.
+After activating 0.11.0, 72 public HTTPS branch states passed using explicitly synthetic salons. The follow-up 0.11.1 presentation patch hides an empty demo control, clarifies cross-branch activity labels and keeps the CRM record action visible on mobile. Eight focused local states and three migration/worker tests passed; the worker upgrade preserved an open draft. Eight focused public HTTPS states then passed across both themes and widths, and all 27 public assets matched the final reviewed release. These checks created no real purchase, money transfer or external message.
 
-The full commercial expansion continues with multi-branch organizations and related access flows. Subscription prices remain unset. Automatic billing, access cutoff and external payment processing are not enabled.
+The 0.10 release separately passed 48 local platform states and four public login layouts. Authenticated platform flows were tested locally; the production operator account awaits owner setup and acceptance. Subscription prices remain unset. Automatic billing, access cutoff and external payment processing are not enabled.
 
-Kavenegar template settings are available, but SMS transport and OTP login remain disconnected. Verified account recovery, line-specific CRM ownership and multi-branch access remain unfinished. Real payment transport is not connected. Physical iOS/Android Push receipt and device GPU performance are not established by browser tests. Calendar files require manual import and do not synchronize later changes.
+Kavenegar template settings are available, but SMS transport and OTP login remain disconnected. Verified account recovery and line-specific CRM ownership remain unfinished. Real payment transport is not connected. Physical iOS/Android Push receipt and device GPU performance are not established by browser tests. Calendar files require manual import and do not synchronize later changes.
 
 This repository contains public product notes only. Private application source, infrastructure configuration, keys and customer data are not published here. Validation records observed behavior, not a guarantee of availability, security or marketing results.
 
