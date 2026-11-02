@@ -1,8 +1,16 @@
 # A2 Beauty
 
-[Open A2 Beauty](https://beauty.amiraliyaghouti.com) · Release 0.9.0
+[Open A2 Beauty](https://beauty.amiraliyaghouti.com) · Release 0.10.0
 
 A2 Beauty connects customer booking, specialist schedules and salon management in independent salon workspaces. Customer records and follow-ups use the shared A2 CRM domain.
+
+## Platform plans and subscription records
+
+A separate management workspace organizes salon plans and subscription periods. Salon owners cannot turn themselves into platform operators. Authorized operators receive a private, expiring setup link and choose their own password; platform and salon sign-ins remain independent.
+
+Plans can remain drafts with no price. An unset price cannot be activated, and changing a plan does not rewrite previously recorded subscription terms. Operators can record activation, renewal, suspension, resumption and cancellation with version checks and retained history. A salon owner sees only that salon's terms in their account.
+
+These are administrative subscription records. They do not charge a card, certify payment or automatically cut off salon access when a period expires or is suspended. No production price or paid subscription has been configured. Multi-branch access is the next commercial milestone.
 
 ## Collections and staff commissions
 
@@ -52,15 +60,15 @@ The full Persian calendar supports the ninety-day booking horizon. Appointment f
 
 ## Validation and boundaries
 
-For 0.9, 122 Beauty tests and six shared Core tests passed without skips. Coverage includes exact monetary calculations, discounts/refunds, stored commission rules, duplicate/concurrent submissions, tenant and role denials, revoked sessions, CRM financial visibility and safe failure rollback. Existing booking, CRM, profile, scheduling, notification and marketing suites also passed.
+For 0.10, 132 Beauty tests and six shared Core tests passed without skips. New cases cover operator/salon separation, single-use setup, unpriced activation denial, stale and concurrent updates, preserved subscription terms, revoked operator sessions and failure rollback. Existing financial, booking, CRM, profile, scheduling, notification and marketing backend suites also passed.
 
-Local browser validation passed 192 states across light/dark and desktop/mobile: 72 financial states, 52 profile/CRM states, 24 account states and 44 service-scoped manager states. Screenshots and interactive states were inspected. Migration reruns preserved financial records, the runtime could not edit or delete financial events, and the previous app worker was replaced without losing an unsaved draft. A tested source fallback retained records and existing booking/CRM behavior while making financial panels unavailable.
+Forty-eight local platform browser states passed across light/dark and desktop/mobile. Setup, draft forms, errors, focus, subscription history, independent salon sessions and owner summaries were exercised and screenshots inspected. Offline setup/reissue, restricted database privileges, migration reruns and source fallback were also checked. The previous app worker was replaced without losing an unsaved draft.
 
-All 72 financial browser states also passed over public HTTPS after activation. These tests used isolated synthetic salons and actual HTTP/database operations, including explicitly simulated financial records. No real purchase, money transfer or external message occurred. All 23 published assets matched the reviewed release. Physical-device Push receipt and graphics performance remain separate acceptance checks.
+After activation, all 26 published assets matched the reviewed release. The public HTTPS platform login rendered in four theme/width combinations and protected routes denied anonymous access. Authenticated platform flows were tested locally; the production operator account awaits its owner's password setup and acceptance. No production subscription, real purchase, money transfer or external message was created by these checks. The 0.9 release previously passed 192 local browser states and 72 public HTTPS financial states; those counts are historical, not new 0.10 browser coverage.
 
-The full commercial expansion continues with configurable salon subscriptions, multiple branches and platform administration. These capabilities are not included in this release. Subscription prices remain unset; plans will remain unpriced drafts until configured and activated.
+The full commercial expansion continues with multi-branch organizations and related access flows. Subscription prices remain unset. Automatic billing, access cutoff and external payment processing are not enabled.
 
-Kavenegar template settings are available, but SMS transport and OTP login remain disconnected. Verified account recovery, line-specific CRM ownership and the remaining commercial capabilities are unfinished. Real payment transport is not connected. Physical iOS/Android Push receipt and device GPU performance are not established by browser tests. Calendar files require manual import and do not synchronize later changes.
+Kavenegar template settings are available, but SMS transport and OTP login remain disconnected. Verified account recovery, line-specific CRM ownership and multi-branch access remain unfinished. Real payment transport is not connected. Physical iOS/Android Push receipt and device GPU performance are not established by browser tests. Calendar files require manual import and do not synchronize later changes.
 
 This repository contains public product notes only. Private application source, infrastructure configuration, keys and customer data are not published here. Validation records observed behavior, not a guarantee of availability, security or marketing results.
 
