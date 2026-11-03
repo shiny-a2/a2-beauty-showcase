@@ -2,7 +2,7 @@
 
 [Open the product catalogue](https://beauty.amiraliyaghouti.com) · [Sign in](https://beauty.amiraliyaghouti.com/login) · [Set up a salon](https://beauty.amiraliyaghouti.com/start)
 
-Release **0.19.0** connects customer booking, specialist schedules and salon management in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+Release **0.19.1** connects customer booking, specialist schedules and salon management in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
 
 ## Explore the product
 
@@ -11,6 +11,10 @@ The catalogue presents three groups of capabilities: **Essential**, **Growth** a
 Enter **visitor12** on the login page and leave the password empty to open an isolated, populated demo. Switch between manager, specialist and customer panels to explore related services, appointments, CRM records, marketing work, financial reports and loyalty gifts. A connected sample branch demonstrates permission-based access.
 
 Demo names, contact details, prices and financial records are synthetic. Demo activity does not send external messages or transfer money, and each demo expires. It does not give access to an existing salon or platform administration. Ordinary accounts still require their credentials.
+
+## Privacy in operational logs
+
+Version 0.19.1 minimizes new Beauty access records: query parameters and referrer information are omitted, including customer search terms. Response status and timing remain available for troubleshooting. Cookies, authorization headers and request bodies are not access-log fields. Existing records are unchanged; URL paths and other error-log conditions require separate review.
 
 ## Demo maintenance
 
@@ -52,9 +56,9 @@ Kavenegar template settings are available, but real SMS delivery and OTP login r
 
 ## Release validation
 
-The release passed 207 Beauty tests, six shared Core tests and 147 local catalogue/role-panel browser states in light/dark themes at mobile and desktop widths. Retention checks cover tenant isolation, stale previews, restricted authority, complete rollback after a failed deletion and visitor entry after recovering capacity at the existing limit. The actual maintenance command backed up and removed two expired synthetic salons; restoring that backup separately matched every row across 56 tables. The 0.18.1-to-0.19.0 service-worker upgrade preserved an unsaved draft.
+The release passed 207 Beauty tests, six shared Core tests and 147 local catalogue/role-panel browser states in light/dark themes at mobile and desktop widths. Retention checks cover tenant isolation, stale previews, restricted authority, complete rollback after a failed deletion and visitor entry after recovering capacity at the existing limit. The previous 0.19.0 maintenance rehearsal backed up and removed two expired synthetic salons; restoring that backup separately matched every row across 56 tables. The 0.19.0-to-0.19.1 service-worker upgrade preserved an unsaved draft.
 
-The final public deployment passed 160 catalogue/login/three-role browser states with no captured JavaScript errors or document overflow, and all 39 public assets matched the package. The previous release's delayed-logout correction remains included. No expired production demo was eligible for removal during this release's initial inventory.
+Six synthetic live-server probes verified access-log minimization, JSON escaping and retained status/timing across success, redirect, denial and invalid input. The final 0.19.1 public browser check passed 160 catalogue/login/three-role states, and all 39 public assets matched the package. The previous delayed-logout correction remains included. No demo history is purged by this privacy update.
 
 These checks do not establish physical iOS/Android Push receipt, device GPU performance or owner/pilot acceptance. No real purchase, customer financial event or external message was used for presentation testing.
 
