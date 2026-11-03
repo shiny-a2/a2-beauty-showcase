@@ -4,6 +4,14 @@
 
 Release **0.26.0** connects customer booking, specialist schedules, reception and salon management in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
 
+## Notification center — next-release source
+
+The 0.27.0 source candidate adds an unread bell and a shared notification center for salon managers, reception, specialists and customers. Filters separate unread messages, appointment reminders, attendance and booking changes. Cards show the current service, time and status, with relevant customer/specialist context and direct appointment details. Authorized staff can confirm completion or no-show through the existing booking workflow.
+
+Day-before and one-hour reminders use the existing delivery worker. An overdue appointment prompts authorized staff to check attendance; it never automatically marks a customer absent. The customer is notified of no-show only after a permitted staff member records it. Repeated processing does not duplicate the same reminder stage, and cancelled, rescheduled, reassigned or no-longer-authorized delivery is suppressed. Historical reminder wording clearly distinguishes an old message from the current appointment state.
+
+Local validation covered 294 distinct Beauty checks and 96 interactive browser states across four roles, mobile/desktop and light/dark themes. Build and shared-module checks passed. No real customer messages or financial transactions were used. This is published source preparation, not a live activation: the deployed product remains 0.26.0. Real-device Push verification and SMS activation remain pending.
+
 ## Reception, CRM and cashier access
 
 Reception staff now have their own workspace. A salon owner creates a reception account and selects booking, customer relationship and cashier access individually. A new account starts without work permissions and must change its initial password. The same person can handle all three areas or only the assigned work.
