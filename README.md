@@ -1,8 +1,16 @@
 # A2 Beauty
 
-[Open A2 Beauty](https://beauty.amiraliyaghouti.com) · Release 0.12.1
+[Open A2 Beauty](https://beauty.amiraliyaghouti.com) · Release 0.13.1
 
 A2 Beauty connects customer booking, specialist schedules and salon management in independent salon workspaces. Customer records and follow-ups use the shared A2 CRM domain.
+
+## A complete, connected demo
+
+Opening the demo now creates an independent sample salon and connected sample branch. Each contains five specialists, ten services across makeup, nails, lashes, hair and skincare, seventeen customers, forty-three appointments and eighteen CRM records. Dates are relative to the current Tehran day, so past visits, today's schedule and future appointments remain useful. Existing demos offer a fresh populated scenario.
+
+The same customers connect booking history, scoped service CRM, follow-ups, appointment notifications and financial reports. Sample bills include discounts, partial collections, a refund and staff settlements that reconcile with earned commission. Six internal marketing campaigns show drafts, scheduled, paused and completed work; each audience type has suitable customers, and completed campaign work links to an actual CRM task. A reception account and nail-line manager demonstrate separate permissions. Specialists have schedules, leave and commission statements; customers can inspect their own appointments.
+
+All names, numbers, prices and financial records are explicitly synthetic. The scenario does not send messages or transfer money, does not touch an existing real salon, and expires with the demo. It leaves global platform plans, subscription prices and operator accounts unchanged. Unset commercial prices remain unset.
 
 ## Owner-approved branch workspaces
 
@@ -73,6 +81,12 @@ Persian typography, right-to-left layouts, rose, pearl and lilac surfaces and di
 The full Persian calendar supports the ninety-day booking horizon. Appointment filters, details and manual calendar-file downloads help organize visits. Customer search, linked CRM history, granular account access, password onboarding, the in-app inbox and optional browser Push are included. The installable web app provides home-screen guidance. Demonstrations are explicitly synthetic and send no external notifications.
 
 ## Validation and boundaries
+
+Version 0.13 passed 163 Beauty and six shared Core tests. Eight focused scenario checks additionally verified final owner checks, related data, hours/buffers, financial reconciliation, marketing audiences and role/branch access. All 128 local browser states passed in both themes at mobile and desktop widths, including customer, staff, line manager, salon manager and branch screens. The worker upgrade retained an unsaved draft.
+
+The full scenario passed 128 browser states on the public HTTPS site. A final consistency review corrected a fixed sample follow-up label to use its booked service name; 11 focused backend/worker tests passed for that correction.
+
+The final 0.13.1 correction passed eight public CRM/campaign states across both themes and widths; the task text matched its linked service. All 27 public assets matched the final release package. These checks used only synthetic demo workspaces and sent no external notification or money transfer.
 
 For 0.12, 155 Beauty tests and six shared Core tests passed without skips. New cases cover service isolation, contact search/privacy, independent stages, task assignments, scoped receipts, account-ID collision, campaign context, consent boundaries, inactive services, revoked authority and transactional rollback. Existing booking, financial, platform, profile, scheduling and notification backend suites also passed.
 
