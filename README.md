@@ -2,7 +2,13 @@
 
 [Open the product catalogue](https://beauty.amiraliyaghouti.com) · [Sign in](https://beauty.amiraliyaghouti.com/login) · [Set up a salon](https://beauty.amiraliyaghouti.com/start)
 
-Release **0.23.1** connects customer booking, specialist schedules and salon management in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+Release **0.24.0** connects customer booking, specialist schedules and salon management in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+
+## A catalogue that follows your scroll
+
+Version 0.24 keeps a three-dimensional beauty studio beside the product story. Scrolling through the introduction, Essential, Growth and Intelligence changes the studio angle, accessory positions and artwork while the feature text stays readable. Scrolling back restores earlier poses. Chapter links support the keyboard and show the current section.
+
+The studio adapts to mobile, desktop and short landscape layouts. A Reduce motion control remembers the visitor's choice, and the device's reduced-motion setting takes precedence. If browser graphics are unavailable, an illustrated fallback remains. Rendering settles when input stops and pauses while the scene is out of view. Native scrolling, login links and the existing theme control remain available.
 
 ## Explore the product
 
@@ -82,9 +88,9 @@ Kavenegar template settings are available, but real SMS delivery and OTP login r
 
 ## Release validation
 
-The release passed 243 Beauty tests, six shared Core tests, 372 focused navigation browser states and 147 catalogue/role states. Navigation checks covered 320, 390, 800, 1024 and 1440px widths in both themes, every permitted section, all three roles, service-line restrictions, mandatory initial-password setup, active state, keyboard group expansion/collapse, focus/close behavior and resizing. The shared loyalty suite also passed 333 tests, and 11 contract tests passed. The bottom bar had no horizontal scrolling in these checks. Service-worker replacement preserved an unsaved draft.
+The release passed 243 Beauty tests, six shared Core tests, 11 contract tests and build. Sixty focused catalogue browser states covered four viewport widths in both themes, reversible scroll progression, keyboard anchors, persistent and system reduced motion, unavailable graphics, blocked storage, short landscape, login links and back navigation. Six graphics scenarios checked idle/offscreen rendering and cleanup. The catalogue/role suite passed 147 states, and service-worker replacement preserved an unsaved draft.
 
-After publication, 348 public HTTPS navigation states passed across all three roles, five viewport widths and both themes, with no browser errors or horizontal bottom-bar scrolling. Desktop group expansion, keyboard interaction and current-page visibility were included. All 40 public assets matched the release package. The two synthetic demo workspaces used for verification were closed and their remaining sessions removed.
+After activation, the same 60 catalogue states passed over public HTTPS. All 41 public assets matched the release package. Verification used only public pages: no demo workspace, login session, customer record, financial event or external message was created.
 
 These checks do not establish physical iOS/Android Push receipt, device GPU performance or owner/pilot acceptance. No real purchase, customer financial event or external message was used for presentation testing.
 
