@@ -16,11 +16,13 @@ A shared product-protection roadmap also covers commercial licensing, copyright 
 
 ## Shared licensing groundwork
 
-A separate Core source milestone adds a reusable license-status monitor and a private operator tool for Beauty. It checks signed policies, installation scope, expiry and stale responses, and retains verified evidence during connection failures. Reports explicitly distinguish a verified module policy from product authorization.
+The shared licensing source now supports an optional signed product association, so a Beauty observer can distinguish its own product license from an unrelated one. Legacy clients keep their existing validation behavior. Product-aware checks reject wrong products, missing required claims and downgrade to an older unbound response.
 
-Fifteen local license tests passed, including compatibility with the existing PHP authority using synthetic in-memory records, alongside the workspace build, six Core tests and 11 contract tests. No live authority was contacted and no real credentials or customer records were used.
+The monitor remains passive: it does not grant user permissions or lock salon accounts. A separate operator tool reports verified policy evidence while retaining safe failure behavior. A packaging correction also makes the authority schema definitions available in a fresh source checkout.
 
-This is source tooling, not an activated salon feature. Beauty remains on release 0.26.0. Commercial license enforcement, product mapping and live integration remain pending; the current signed contract does not establish product entitlement. Existing salon access is unchanged.
+Local validation passed 19 license tests, including both PHP authority contracts and the actual Beauty operator tool, plus the workspace build, six Core tests and 11 contract tests. Seven authority PHP suites and the existing admin browser regression passed, including mobile/desktop light/dark layouts. Product, HTTP and WordPress compatibility checks also passed from a clean source archive. All data was synthetic; no live authority or customer records were used.
+
+These are published source changes, not a production activation. Beauty remains on release 0.26.0. Product registration, commercial feature mapping, installation/account counting and live integration remain pending. Existing salon access is unchanged.
 
 ## Tell us about your salon
 
