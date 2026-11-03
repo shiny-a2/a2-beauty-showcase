@@ -2,7 +2,7 @@
 
 [Open the product catalogue](https://beauty.amiraliyaghouti.com) · [Sign in](https://beauty.amiraliyaghouti.com/login) · [Set up a salon](https://beauty.amiraliyaghouti.com/start)
 
-Release **0.18.1** connects customer booking, specialist schedules and salon management in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+Release **0.19.0** connects customer booking, specialist schedules and salon management in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
 
 ## Explore the product
 
@@ -11,6 +11,10 @@ The catalogue presents three groups of capabilities: **Essential**, **Growth** a
 Enter **visitor12** on the login page and leave the password empty to open an isolated, populated demo. Switch between manager, specialist and customer panels to explore related services, appointments, CRM records, marketing work, financial reports and loyalty gifts. A connected sample branch demonstrates permission-based access.
 
 Demo names, contact details, prices and financial records are synthetic. Demo activity does not send external messages or transfer money, and each demo expires. It does not give access to an existing salon or platform administration. Ordinary accounts still require their credentials.
+
+## Demo maintenance
+
+Version 0.19 adds an explicit operator workflow for reviewing and removing old demo workspaces after their access period and an additional seven-day recovery grace. Cleanup preserves connected branch groups, excludes valid or permanent salons and requires a matching preview plus a backup before removal. The ordinary web service receives no extra deletion privileges. This is a maintenance command, not an automatic background purge; ongoing capacity checks and backup custody remain operational responsibilities.
 
 ## Essential — daily salon work
 
@@ -48,9 +52,9 @@ Kavenegar template settings are available, but real SMS delivery and OTP login r
 
 ## Release validation
 
-The final patch passed 197 Beauty tests, six shared Core tests, 147 local catalogue/role-panel browser states and four delayed-logout regression cases. Setup and Persian-control browser coverage from the combined release also covers light/dark themes at mobile and desktop widths. Before migration, an actual application backup was restored into an isolated database and compared across 48 tables. This was a same-host recovery check, not off-host recovery acceptance.
+The release passed 207 Beauty tests, six shared Core tests and 147 local catalogue/role-panel browser states in light/dark themes at mobile and desktop widths. Retention checks cover tenant isolation, stale previews, restricted authority, complete rollback after a failed deletion and visitor entry after recovering capacity at the existing limit. The actual maintenance command backed up and removed two expired synthetic salons; restoring that backup separately matched every row across 56 tables. The 0.18.1-to-0.19.0 service-worker upgrade preserved an unsaved draft.
 
-The final public release passed 195 recorded browser states covering the catalogue, login, role boundaries and synthetic demo workflows; all 39 public assets matched the release package. Version 0.18.1 corrects a logout click that could be ignored during a pending demo-role transition; the delayed-response regression was reproduced and verified before publication. The service-worker upgrade preserved an unsaved draft.
+The final public deployment passed 160 catalogue/login/three-role browser states with no captured JavaScript errors or document overflow, and all 39 public assets matched the package. The previous release's delayed-logout correction remains included. No expired production demo was eligible for removal during this release's initial inventory.
 
 These checks do not establish physical iOS/Android Push receipt, device GPU performance or owner/pilot acceptance. No real purchase, customer financial event or external message was used for presentation testing.
 
