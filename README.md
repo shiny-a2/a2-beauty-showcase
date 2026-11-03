@@ -1,8 +1,16 @@
 # A2 Beauty
 
-[Open the product catalogue](https://beauty.amiraliyaghouti.com) · [Sign in](https://beauty.amiraliyaghouti.com/login) · [Set up a salon](https://beauty.amiraliyaghouti.com/start)
+[Open the product catalogue](https://beauty.amiraliyaghouti.com) · [Sign in](https://beauty.amiraliyaghouti.com/login) · [Request a consultation](https://beauty.amiraliyaghouti.com/start)
 
-Release **0.24.0** connects customer booking, specialist schedules and salon management in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+Release **0.25.0** connects customer booking, specialist schedules and salon management in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+
+## Tell us about your salon
+
+Version 0.25 replaces public account creation with a consultation request. Visitors choose a package and provide their salon name, contact details, city and requirements, with consent to follow up about that request. Submission returns a reference without creating a salon, login account or customer record.
+
+Platform management opens on a request inbox with new, in-progress and closed states, contact details, follow-up notes and filtering. Operators can create salon accounts after coordination; each owner must change the initial password. Salon accounts cannot read this inbox or create new salon workspaces.
+
+The catalogue now describes SMS, online payments and AI capabilities as separately activated offerings. Proposed Intelligence capabilities include campaign copy assistance, customer visit-pattern analysis and management summaries. These require implementation/activation; they do not run in the current demo. Scope, activation conditions and pricing are agreed before a contract.
 
 ## A catalogue that follows your scroll
 
@@ -12,7 +20,7 @@ The studio adapts to mobile, desktop and short landscape layouts. A Reduce motio
 
 ## Explore the product
 
-The catalogue presents three groups of capabilities: **Essential**, **Growth** and **Intelligence**. These are feature chapters; they are not a promise of finalized subscription prices or automatic AI predictions.
+The catalogue presents three groups of capabilities: **Essential**, **Growth** and **Intelligence**. Final package composition and pricing are agreed during consultation. Features marked as requiring activation are not represented as live demo functionality.
 
 Enter **visitor12** on the login page and leave the password empty to open an isolated, populated demo. Switch between manager, specialist and customer panels to explore related services, appointments, CRM records, marketing work, financial reports and loyalty gifts. A connected sample branch demonstrates permission-based access.
 
@@ -54,7 +62,7 @@ Version 0.19 adds an explicit operator workflow for reviewing and removing old d
 
 ## Essential — daily salon work
 
-Owners can create a salon from the catalogue or login page, then follow setup tasks for specialists, services and prices, working hours and the salon address. Progress reflects current configuration: deactivating a specialist can make a service need attention again. Owners can copy their booking link and preview the customer journey.
+Platform operators create salon accounts after coordination. Owners then follow setup tasks for specialists, services and prices, working hours and the salon address. Progress reflects current configuration: deactivating a specialist can make a service need attention again. Owners can copy their booking link and preview the customer journey.
 
 Customers choose a service, specialist and appointment time, then manage their own reservations. Staff see their assigned appointments and time off. Managers organize service categories, staff skills, schedules and scoped account access. Working time includes service duration and preparation buffers; rescheduling checks availability again.
 
@@ -68,7 +76,9 @@ Marketing creates internal CRM work for service recalls, inactive customers, fir
 
 The salon club awards points for eligible completed services and net collections after discounts/refunds. Managers configure general or service-specific rules, availability delays, expiry, recognition levels and non-cash gifts. Customers see their points and redeem gifts; managers record fulfillment. Refunds reconcile earned points, including deficits after prior redemption. Points are not money, and a gift does not automatically reserve an appointment or discount a bill. Birthday/referral campaigns are not connected in this release.
 
-## Intelligence — recorded performance and accounting
+## Intelligence — reporting and activation-scoped AI
+
+Proposed AI assistance covers campaign drafts, customer visit-pattern analysis and management summaries, with human review. These capabilities need separate implementation and activation; executable AI is not part of the current demo.
 
 Managers can record bills, discounts, manual collections/refunds, staff commissions and settlements. Commission follows net collected amounts for completed services; original rule snapshots preserve past calculations. Repeated submissions do not duplicate financial records, and over-collection/refund limits are enforced.
 
@@ -76,9 +86,9 @@ Operational accounting adds paid expenses and retained corrections, cash movemen
 
 ## Branches, access and platform administration
 
-Owners can invite existing salons into an organization. Each branch owner approves and controls the permissions, and can change or revoke them. Branches retain their own customers, appointments and financial records; switching workspaces does not merge customer databases or confer platform authority.
+Only platform operators can create new branch connections between existing salons. The platform interface begins with appointment-viewing permission; the branch owner can subsequently change or revoke the granted access. Salon sessions cannot create organizations, invite branches or accept connection invitations. Branches retain their own customers, appointments and financial records; switching workspaces does not merge customer databases or confer platform authority.
 
-A separate platform workspace manages salon directories, plan drafts and subscription lifecycle records. Salon accounts cannot promote themselves to platform operators. Subscription snapshots retain their terms and history. These administrative records do not charge a card or automatically enforce feature limits or expiry lockout.
+A separate platform workspace manages sales requests, salon account creation, branch connections, directories, plan drafts and subscription lifecycle records. Salon accounts cannot promote themselves to platform operators. Subscription snapshots retain their terms and history. These administrative records do not charge a card or automatically enforce feature limits or expiry lockout.
 
 ## Notifications and web app
 
@@ -88,9 +98,11 @@ Kavenegar template settings are available, but real SMS delivery and OTP login r
 
 ## Release validation
 
-The release passed 243 Beauty tests, six shared Core tests, 11 contract tests and build. Sixty focused catalogue browser states covered four viewport widths in both themes, reversible scroll progression, keyboard anchors, persistent and system reduced motion, unavailable graphics, blocked storage, short landscape, login links and back navigation. Six graphics scenarios checked idle/offscreen rendering and cleanup. The catalogue/role suite passed 147 states, and service-worker replacement preserved an unsaved draft.
+Local release checks passed 252 Beauty tests, six shared Core tests, 11 contract tests and build. Coverage includes request validation and duplicate submissions, access denial, operator tracking, account setup, branch approval, revoked sessions, transaction rollback, migration compatibility and preservation of sales requests during demo cleanup.
 
-After activation, the same 60 catalogue states passed over public HTTPS. All 41 public assets matched the release package. Verification used only public pages: no demo workspace, login session, customer record, financial event or external message was created.
+Sixty-eight sales/operator browser states and 147 catalogue/login/role states passed across light/dark desktop and mobile layouts, without page errors or horizontal overflow. Interactive checks included form validation, focus, confirmation, filtering, follow-up notes, theme switching, salon creation and branch connection. Service-worker replacement preserved an unsaved draft. All application records created for these checks were synthetic and local.
+
+After activation, 36 public HTTPS browser states passed in both themes at desktop/mobile widths, with no page errors or horizontal overflow. All 41 public assets matched the release package. Public checks confirmed that signup is closed and private request/branch data requires platform authentication. Live browser verification created no account, sales request, demo, financial record or external message; authenticated workflows were tested locally with synthetic records.
 
 These checks do not establish physical iOS/Android Push receipt, device GPU performance or owner/pilot acceptance. No real purchase, customer financial event or external message was used for presentation testing.
 
