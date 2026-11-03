@@ -2,7 +2,7 @@
 
 [Open the product catalogue](https://beauty.amiraliyaghouti.com) · [Sign in](https://beauty.amiraliyaghouti.com/login) · [Set up a salon](https://beauty.amiraliyaghouti.com/start)
 
-Release **0.23.0** connects customer booking, specialist schedules and salon management in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+Release **0.23.1** connects customer booking, specialist schedules and salon management in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
 
 ## Explore the product
 
@@ -16,7 +16,7 @@ Demo names, contact details, prices and financial records are synthetic. Demo ac
 
 Version 0.23 replaces the scrolling bottom bar with a few fixed destinations and a labeled menu button. Managers reach today's work, appointments, new bookings and customers directly. Specialists and customers receive shortcuts for their own daily tasks. The menu groups the remaining permitted sections, including finance, team, settings and account access.
 
-The active section remains visible, closing the menu restores keyboard focus, and selecting a section opens its page. The desktop sidebar remains available. Navigation respects the same role, service-line and first-login restrictions as before; it does not grant new access.
+The active section remains visible, closing the menu restores keyboard focus, and selecting a section opens its page. Version 0.23.1 groups the manager desktop sidebar into expandable salon work, customers, finance, administration and account sections. Daily work and the current page group open automatically. Keyboard users can expand or collapse each group; selecting a destination moves focus to its page heading. Short specialist and customer lists remain directly accessible. Navigation respects the same role, service-line and first-login restrictions as before; it does not grant new access.
 
 ## Follow up with the next customer
 
@@ -82,9 +82,9 @@ Kavenegar template settings are available, but real SMS delivery and OTP login r
 
 ## Release validation
 
-The release passed 243 Beauty tests, six shared Core tests, 300 focused navigation browser states and 147 catalogue/role states. Navigation checks covered 320, 390, 800 and 1440px widths in both themes, every permitted section, all three roles, service-line restrictions, mandatory initial-password setup, active state, focus/close behavior and resizing. The bottom bar had no horizontal scrolling in these checks. Service-worker replacement preserved an unsaved draft.
+The release passed 243 Beauty tests, six shared Core tests, 372 focused navigation browser states and 147 catalogue/role states. Navigation checks covered 320, 390, 800, 1024 and 1440px widths in both themes, every permitted section, all three roles, service-line restrictions, mandatory initial-password setup, active state, keyboard group expansion/collapse, focus/close behavior and resizing. The shared loyalty suite also passed 333 tests, and 11 contract tests passed. The bottom bar had no horizontal scrolling in these checks. Service-worker replacement preserved an unsaved draft.
 
-After publication, 276 public HTTPS navigation states passed across all three roles, four viewport widths and both themes, with no browser errors or horizontal bottom-bar scrolling. All 40 public assets matched the release package. The two synthetic demo workspaces used for this verification were closed and their remaining sessions removed.
+After publication, 348 public HTTPS navigation states passed across all three roles, five viewport widths and both themes, with no browser errors or horizontal bottom-bar scrolling. Desktop group expansion, keyboard interaction and current-page visibility were included. All 40 public assets matched the release package. The two synthetic demo workspaces used for verification were closed and their remaining sessions removed.
 
 These checks do not establish physical iOS/Android Push receipt, device GPU performance or owner/pilot acceptance. No real purchase, customer financial event or external message was used for presentation testing.
 
