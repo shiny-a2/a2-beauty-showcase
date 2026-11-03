@@ -2,7 +2,17 @@
 
 [Open the product catalogue](https://beauty.amiraliyaghouti.com) · [Sign in](https://beauty.amiraliyaghouti.com/login) · [Request a consultation](https://beauty.amiraliyaghouti.com/start)
 
-Release **0.25.0** connects customer booking, specialist schedules and salon management in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+Release **0.26.0** connects customer booking, specialist schedules, reception and salon management in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+
+## Reception, CRM and cashier access
+
+Reception staff now have their own workspace. A salon owner creates a reception account and selects booking, customer relationship and cashier access individually. A new account starts without work permissions and must change its initial password. The same person can handle all three areas or only the assigned work.
+
+Cashier permissions distinguish viewing bills, issuing bills and recording collections, discounts/quoted prices, refunds and voiding an unpaid bill. Cashier access does not expose commission rules or open accounting, staff settlement, user administration or salon settings. Permission changes close existing sessions. Linking a service to a CRM record now explicitly checks CRM permission, including for delegated accounts. Existing financial records, refund limits, CRM follow-ups and customer loyalty remain on their shared processing paths.
+
+The reception home shows permitted work areas. Mobile navigation keeps reception, appointments, customers and cashier directly accessible when assigned, with other permitted destinations in the menu. The demo offers reception as a fourth workspace.
+
+A shared product-protection roadmap also covers commercial licensing, copyright notices, abuse controls and release protection across A2 products. It is planned work; this release does not activate commercial license enforcement. Backend source remains private, while code delivered to a browser is inherently inspectable.
 
 ## Tell us about your salon
 
@@ -22,7 +32,7 @@ The studio adapts to mobile, desktop and short landscape layouts. A Reduce motio
 
 The catalogue presents three groups of capabilities: **Essential**, **Growth** and **Intelligence**. Final package composition and pricing are agreed during consultation. Features marked as requiring activation are not represented as live demo functionality.
 
-Enter **visitor12** on the login page and leave the password empty to open an isolated, populated demo. Switch between manager, specialist and customer panels to explore related services, appointments, CRM records, marketing work, financial reports and loyalty gifts. A connected sample branch demonstrates permission-based access.
+Enter **visitor12** on the login page and leave the password empty to open an isolated, populated demo. Switch between manager, reception, specialist and customer panels to explore related services, appointments, CRM records, marketing work, financial reports and loyalty gifts. A connected sample branch demonstrates permission-based access.
 
 Demo names, contact details, prices and financial records are synthetic. Demo activity does not send external messages or transfer money, and each demo expires. It does not give access to an existing salon or platform administration. Ordinary accounts still require their credentials.
 
@@ -98,11 +108,11 @@ Kavenegar template settings are available, but real SMS delivery and OTP login r
 
 ## Release validation
 
-Local release checks passed 252 Beauty tests, six shared Core tests, 11 contract tests and build. Coverage includes request validation and duplicate submissions, access denial, operator tracking, account setup, branch approval, revoked sessions, transaction rollback, migration compatibility and preservation of sales requests during demo cleanup.
+Local validation covered 265 distinct Beauty tests across the full suite and focused reception/migration runs, six shared Core tests, 11 contract tests and build. Checks included independent permissions, initial-password onboarding, cross-salon denial, CRM commands, cashier restrictions, retries/refund limits, queued-access revocation, booking notifications, migration replay and recovery compatibility.
 
-Sixty-eight sales/operator browser states and 147 catalogue/login/role states passed across light/dark desktop and mobile layouts, without page errors or horizontal overflow. Interactive checks included form validation, focus, confirmation, filtering, follow-up notes, theme switching, salon creation and branch connection. Service-worker replacement preserved an unsaved draft. All application records created for these checks were synthetic and local.
+Sixty-two reception browser states and 147 catalogue/login/existing-role states passed across light/dark desktop and mobile layouts, with no page errors or horizontal overflow. Interactive checks included account creation and editing, focus, separate modules, a synthetic collection confirmation, read-only cashier access, mobile menus and demo switching. Service-worker replacement preserved an unsaved draft. All financial and account records used for these checks were synthetic and local.
 
-After activation, 36 public HTTPS browser states passed in both themes at desktop/mobile widths, with no page errors or horizontal overflow. All 41 public assets matched the release package. Public checks confirmed that signup is closed and private request/branch data requires platform authentication. Live browser verification created no account, sales request, demo, financial record or external message; authenticated workflows were tested locally with synthetic records.
+After activation, all 41 public assets matched the release package and 36 public HTTPS browser states passed in both themes at desktop/mobile widths, without page errors or horizontal overflow. Seven private/source paths denied access and four protected APIs required authentication. Public checks made no API writes. Live authenticated workflows and external payment/message delivery are not claimed by these checks.
 
 These checks do not establish physical iOS/Android Push receipt, device GPU performance or owner/pilot acceptance. No real purchase, customer financial event or external message was used for presentation testing.
 
