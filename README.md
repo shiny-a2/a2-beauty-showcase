@@ -14,6 +14,14 @@ The reception home shows permitted work areas. Mobile navigation keeps reception
 
 A shared product-protection roadmap also covers commercial licensing, copyright notices, abuse controls and release protection across A2 products. It is planned work; this release does not activate commercial license enforcement. Backend source remains private, while code delivered to a browser is inherently inspectable.
 
+## Shared licensing groundwork
+
+A separate Core source milestone adds a reusable license-status monitor and a private operator tool for Beauty. It checks signed policies, installation scope, expiry and stale responses, and retains verified evidence during connection failures. Reports explicitly distinguish a verified module policy from product authorization.
+
+Fifteen local license tests passed, including compatibility with the existing PHP authority using synthetic in-memory records, alongside the workspace build, six Core tests and 11 contract tests. No live authority was contacted and no real credentials or customer records were used.
+
+This is source tooling, not an activated salon feature. Beauty remains on release 0.26.0. Commercial license enforcement, product mapping and live integration remain pending; the current signed contract does not establish product entitlement. Existing salon access is unchanged.
+
 ## Tell us about your salon
 
 Version 0.25 replaces public account creation with a consultation request. Visitors choose a package and provide their salon name, contact details, city and requirements, with consent to follow up about that request. Submission returns a reference without creating a salon, login account or customer record.
