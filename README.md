@@ -2,7 +2,7 @@
 
 [Open the product catalogue](https://beauty.amiraliyaghouti.com) · [Sign in](https://beauty.amiraliyaghouti.com/login) · [Set up a salon](https://beauty.amiraliyaghouti.com/start)
 
-Release **0.20.0** connects customer booking, specialist schedules and salon management in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+Release **0.21.0** connects customer booking, specialist schedules and salon management in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
 
 ## Explore the product
 
@@ -12,11 +12,19 @@ Enter **visitor12** on the login page and leave the password empty to open an is
 
 Demo names, contact details, prices and financial records are synthetic. Demo activity does not send external messages or transfer money, and each demo expires. It does not give access to an existing salon or platform administration. Ordinary accounts still require their credentials.
 
+## Recover an account with a saved key
+
+Version 0.21 adds private recovery keys for salon accounts and the separate platform administration account. While signed in, a user confirms their current password to prepare a key, saves it privately, and can replace or revoke it later. A key is displayed only when it is created. Recent recovery activity is visible in the account dialog.
+
+If the password is forgotten, the login page accepts the account details and previously saved key to set a new password. A successful reset replaces the consumed key, closes existing sessions and removes that salon account's Push subscriptions. The user then signs in explicitly. Keys cannot recover a different account or salon, and demo/branch-delegated sessions cannot prepare them.
+
+This requires preparation before losing access. Losing both the password and key still needs verified assisted recovery. It does not provide SMS/email recovery, automatic security messages or multifactor authentication.
+
 ## Safer account sign-in
 
 Version 0.20 strengthens stored passwords through the shared A2 runtime. New passwords use the stronger format; an existing password is upgraded after a successful sign-in, without asking the user to choose a new password or closing their other valid sessions. Failed sign-in and concurrent password/access changes cannot overwrite a newer credential. The separate platform operator realm receives the same upgrade protection.
 
-Password processing has a bounded queue. During saturation, salon and platform login forms explain when to retry. A compatible fallback release was verified before enabling stronger writes, so source rollback can still read upgraded credentials. This does not add account recovery or multifactor authentication.
+Password processing has a bounded queue. During saturation, salon and platform login forms explain when to retry. A compatible fallback release was verified before enabling stronger writes, so source rollback can still read upgraded credentials. Saved-key recovery is added in version 0.21; multifactor authentication remains pending.
 
 ## Privacy in operational logs
 
@@ -58,13 +66,13 @@ A separate platform workspace manages salon directories, plan drafts and subscri
 
 Beauty includes an in-app inbox, browser Push configuration and installation guidance for the web app. Push requires user permission and browser/device support. Calendar-file downloads are manual imports, not ongoing calendar synchronization.
 
-Kavenegar template settings are available, but real SMS delivery and OTP login remain disconnected. Online payment transport is also disconnected. Verified self-service recovery, platform MFA and broader commercial entitlement enforcement remain future work.
+Kavenegar template settings are available, but real SMS delivery and OTP login remain disconnected. Online payment transport is also disconnected. Verified delivery-based or assisted recovery, platform MFA and broader commercial entitlement enforcement remain future work.
 
 ## Release validation
 
-The release passed 221 Beauty tests, six shared Core tests and 163 local browser states across light/dark themes and mobile/desktop widths. New cases cover legacy and stronger credentials, Unicode passwords, queue limits and timeout recovery, safe upgrades, stale authority, transaction rollback and redacted errors. The login error/retry checks cover both salon and platform accounts. The service-worker upgrade preserved an unsaved draft, and the compatible fallback verified both credential formats.
+The release passed 235 Beauty tests, six shared Core tests and 211 local browser states across light/dark themes and mobile/desktop widths. Recovery checks cover account and tenant isolation, replay, concurrent resets, stale authority, session/Push revocation, rate limits and transaction rollback. A local backup/restore preserved 58 tables, and the compatible previous application still accepted recovered passwords. Service-worker replacement preserved an unsaved draft.
 
-After activation, 160 public catalogue/demo/role-panel states and five authenticated salon/platform account checks passed. All 39 public assets matched the release package. Successful live sign-ins produced the expected credential-upgrade audit records, and the server-side compatibility check verified stronger credentials against the fallback reader. The earlier privacy and demo-retention improvements remain included; this release does not purge historical records or activate SMS/payment delivery.
+After activation, 160 public catalogue/demo/role-panel states and 16 synthetic salon/platform recovery states passed. All 40 public assets matched the release package. Actual UI checks exercised key preparation, private history, invalid inputs, password reset, explicit new login and key revocation. Synthetic test accounts were deactivated afterward and their history retained. Existing users' passwords and recovery keys were not changed for testing. SMS/payment delivery remains disconnected.
 
 These checks do not establish physical iOS/Android Push receipt, device GPU performance or owner/pilot acceptance. No real purchase, customer financial event or external message was used for presentation testing.
 
