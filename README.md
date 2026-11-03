@@ -1,6 +1,6 @@
 # A2 Beauty
 
-[Open A2 Beauty](https://beauty.amiraliyaghouti.com) · Release 0.11.1
+[Open A2 Beauty](https://beauty.amiraliyaghouti.com) · Release 0.12.1
 
 A2 Beauty connects customer booking, specialist schedules and salon management in independent salon workspaces. Customer records and follow-ups use the shared A2 CRM domain.
 
@@ -30,7 +30,13 @@ Financial events retain their history. Unpaid bills can be voided before any col
 
 The salon owner can give a manager booking access to selected services. Appointment lists, totals, details, changes and return-customer selection follow that choice. New services do not silently expand access. Changing a manager's scope closes their old sessions; notifications also recheck the current service grant.
 
-This mode supports booking operations. Full CRM records, campaigns, staff schedules, account administration and salon-wide reports stay with authorized salon-wide managers because customer and specialist records can be shared across services. First-time customers book themselves or use an authorized salon-wide manager. The interface makes the selected scope visible and prevents stale forms from restoring older grants.
+Owners can now opt service managers into CRM. A service selector keeps relationship stages, additional contacts, follow-ups, activity and appointment history within the selected service. The customer's primary name and phone remain shared. Search cannot reveal another service's contacts or private salon records. A line manager completes only their own tasks; salon-wide financial, marketing and administration access stays separate.
+
+Bookings create the service association automatically. Authorized salon-wide CRM managers can attach an existing record to another service without copying its earlier contacts or tasks. Service managers can create prospects in their permitted context, while independent stage/version checks prevent one service from overwriting another. Inactive services retain authorized CRM history. Service campaign tasks are now attached to that service; a contact entered for one service does not establish salon-wide marketing consent.
+
+CRM forms now remain open until their updated list is ready. If a response is lost after a save, the interface explains how to retry; the same unchanged submission reuses its recorded result instead of creating a duplicate. Delayed refreshes no longer discard the next customer-record click.
+
+First-time customer accounts still use customer registration or an authorized salon-wide manager. The interface identifies the selected scope and prevents stale access forms from restoring older grants.
 
 ## Editable profiles, connected customer records
 
@@ -68,15 +74,17 @@ The full Persian calendar supports the ninety-day booking horizon. Appointment f
 
 ## Validation and boundaries
 
-For 0.11, 144 Beauty tests and six shared Core tests passed without skips. Branch cases cover owner consent, foreign-salon denials, explicit grants, separate delegated identity, revoked and expired sessions, queued financial/CRM writes, worker authority, invitation reuse and failure rollback. Existing financial, platform, booking, profile, scheduling and marketing backend suites also passed.
+For 0.12, 155 Beauty tests and six shared Core tests passed without skips. New cases cover service isolation, contact search/privacy, independent stages, task assignments, scoped receipts, account-ID collision, campaign context, consent boundaries, inactive services, revoked authority and transactional rollback. Existing booking, financial, platform, profile, scheduling and notification backend suites also passed.
 
-Seventy-two local branch browser states and 24 account-login states passed across light/dark and desktop/mobile. The branch flows include invitation errors, consent, keyboard focus, restricted navigation, grant changes, financial/CRM boundaries, safe return home and disconnection. Screenshots were inspected; no page errors or horizontal overflow remained. Migration reruns, restricted database privileges and the previous source fallback were checked. The app-worker upgrade retained an unsaved draft.
+Fifty-two local service-CRM browser states and 44 existing service-booking states passed in light/dark at mobile and desktop widths. Tests exercised owner permission forms, service switching, shared identity, scoped contacts/tasks, record attachments and denied services. Screenshots were inspected, and the worker upgrade retained an unsaved draft. Repeatable migrations, restricted database permissions and the prior-source fallback were checked.
 
-After activating 0.11.0, 72 public HTTPS branch states passed using explicitly synthetic salons. The follow-up 0.11.1 presentation patch hides an empty demo control, clarifies cross-branch activity labels and keeps the CRM record action visible on mobile. Eight focused local states and three migration/worker tests passed; the worker upgrade preserved an open draft. Eight focused public HTTPS states then passed across both themes and widths, and all 27 public assets matched the final reviewed release. These checks created no real purchase, money transfer or external message.
+The 0.12.1 correction passed 56 local CRM states with delayed requests and intentionally lost responses. A committed contact request was retried with the same identity and command key and created only one record. Existing asynchronous-panel checks, malformed-response handling and the worker upgrade also passed.
+
+The final 0.12.1 release passed 52 service-CRM browser states on the public HTTPS site in both themes and widths, without page errors or horizontal overflow. All 27 public assets matched the release package. The first live 0.12.0 check exposed the delayed-refresh issue described above; it was corrected and the complete live matrix rerun. No real financial event, external notification or customer record was used; bookings and CRM changes were confined to explicitly synthetic salons.
 
 The 0.10 release separately passed 48 local platform states and four public login layouts. Authenticated platform flows were tested locally; the production operator account awaits owner setup and acceptance. Subscription prices remain unset. Automatic billing, access cutoff and external payment processing are not enabled.
 
-Kavenegar template settings are available, but SMS transport and OTP login remain disconnected. Verified account recovery and line-specific CRM ownership remain unfinished. Real payment transport is not connected. Physical iOS/Android Push receipt and device GPU performance are not established by browser tests. Calendar files require manual import and do not synchronize later changes.
+Kavenegar template settings are available, but SMS transport and OTP login remain disconnected. Verified self-service account recovery remains unfinished. Real payment transport is not connected. Physical iOS/Android Push receipt and device GPU performance are not established by browser tests. Calendar files require manual import and do not synchronize later changes.
 
 This repository contains public product notes only. Private application source, infrastructure configuration, keys and customer data are not published here. Validation records observed behavior, not a guarantee of availability, security or marketing results.
 
