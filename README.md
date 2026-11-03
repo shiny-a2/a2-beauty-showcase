@@ -22,17 +22,27 @@ The monitor remains passive: it does not grant user permissions or lock salon ac
 
 Local validation passed 19 license tests, including both PHP authority contracts and the actual Beauty operator tool, plus the workspace build, six Core tests and 11 contract tests. Seven authority PHP suites and the existing admin browser regression passed, including mobile/desktop light/dark layouts. Product, HTTP and WordPress compatibility checks also passed from a clean source archive. All data was synthetic; no live authority or customer records were used.
 
-These are published source changes, not a production activation. Beauty remains on release 0.26.0. Product registration, authoritative salon/license assignments, commercial limits and live integration remain pending. Existing salon access is unchanged.
+These are published source changes, not a production activation. Beauty remains on release 0.26.0. Real product/salon provisioning, commercial limits and live integration remain pending. Existing salon access is unchanged.
 
 ## Independent salon licenses and usage reports
 
 The commercial model now specifies one independent license per salon. New private operator tooling reads one salon's aggregate account usage without changing its data or access. It separates active team accounts, inactive accounts, customers, branch delegates and system accounts. Owners are included once in the team total. Linked salons retain their own license scope.
 
-An explicitly selected reporting policy can supply these aggregate counts to a product-aware license refresh. Separate private caches reject accidental reuse across salons or authority mappings. The report does not include customer names, contact details or financial records. This is account reporting, not a finalized billable-seat policy or global assignment registry.
+An explicitly selected reporting policy can supply these aggregate counts to a product-aware license refresh. Separate private caches reject accidental reuse across salons or authority mappings. The report does not include customer names, contact details or financial records. These counts describe accounts; commercial seat limits still require agreement.
 
 Local validation passed 273 Beauty tests, including eight new usage checks, 19 shared license tests, six Core tests, 11 contract tests and build, with no skips. Tests used synthetic PostgreSQL records and covered salon isolation, concurrent changes, enforced read-only transactions, cache separation and the actual operator tool. Refresh integration used a synthetic signed response; no live authority connection is claimed.
 
 The source is published; this tooling is not deployed or exposed in the salon panels. Beauty remains on 0.26.0 and license enforcement stays inactive.
+
+## Audited salon license assignments
+
+New private tooling registers each salon's association with a central license and installation. Database constraints prevent either active identifier from being assigned to two salons in the same Beauty database. Registration checks a recent signed product policy, and only privileged maintenance operations attributed to an active platform operator can change an association.
+
+Expected revisions reject stale changes, exact retries do not duplicate records, and assignment/history/audit updates commit together. Local revocation blocks the next mapped refresh without deleting history or revoking the central license. Usage reports show whether an association is unassigned, matched, mismatched or revoked. An already approved passive request may finish; this is not user-access enforcement.
+
+Local validation passed 284 Beauty tests, 19 shared license tests, six Core tests, 11 contract tests and build, with no skips. Coverage includes competing salon registrations, duplicate identifiers, denied permissions, rollback on audit/history failure, the private command and repeatable migration preserving existing accounts. Demo cleanup also protects salons with assignment history. All records were synthetic.
+
+This source candidate requires an additive database migration. It has not been applied to production and no real salon has been assigned through this work. The live Beauty application remains 0.26.0; salon panels and commercial access remain unchanged.
 
 ## Tell us about your salon
 
