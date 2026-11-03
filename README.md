@@ -2,7 +2,7 @@
 
 [Open the product catalogue](https://beauty.amiraliyaghouti.com) · [Sign in](https://beauty.amiraliyaghouti.com/login) · [Set up a salon](https://beauty.amiraliyaghouti.com/start)
 
-Release **0.22.1** connects customer booking, specialist schedules and salon management in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+Release **0.23.0** connects customer booking, specialist schedules and salon management in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
 
 ## Explore the product
 
@@ -11,6 +11,12 @@ The catalogue presents three groups of capabilities: **Essential**, **Growth** a
 Enter **visitor12** on the login page and leave the password empty to open an isolated, populated demo. Switch between manager, specialist and customer panels to explore related services, appointments, CRM records, marketing work, financial reports and loyalty gifts. A connected sample branch demonstrates permission-based access.
 
 Demo names, contact details, prices and financial records are synthetic. Demo activity does not send external messages or transfer money, and each demo expires. It does not give access to an existing salon or platform administration. Ordinary accounts still require their credentials.
+
+## Clear mobile navigation
+
+Version 0.23 replaces the scrolling bottom bar with a few fixed destinations and a labeled menu button. Managers reach today's work, appointments, new bookings and customers directly. Specialists and customers receive shortcuts for their own daily tasks. The menu groups the remaining permitted sections, including finance, team, settings and account access.
+
+The active section remains visible, closing the menu restores keyboard focus, and selecting a section opens its page. The desktop sidebar remains available. Navigation respects the same role, service-line and first-login restrictions as before; it does not grant new access.
 
 ## Follow up with the next customer
 
@@ -76,9 +82,9 @@ Kavenegar template settings are available, but real SMS delivery and OTP login r
 
 ## Release validation
 
-The release passed 243 Beauty tests, six shared Core tests and 259 local browser states across light/dark themes and mobile/desktop widths. Checks cover task filters, pagination, named customer records, tenant and service isolation, assignment restrictions, canonical completion/audit, safe read errors, retry, keyboard controls and long Persian content. Service-worker replacement preserved an unsaved draft. The prior packaged application could still read and complete the same tasks.
+The release passed 243 Beauty tests, six shared Core tests, 300 focused navigation browser states and 147 catalogue/role states. Navigation checks covered 320, 390, 800 and 1440px widths in both themes, every permitted section, all three roles, service-line restrictions, mandatory initial-password setup, active state, focus/close behavior and resizing. The bottom bar had no horizontal scrolling in these checks. Service-worker replacement preserved an unsaved draft.
 
-After activating the CRM increment, 192 live catalogue, demo, role-panel and follow-up states passed. Tests created and completed only synthetic demo follow-ups; eight demo workspaces were deactivated and their history retained afterward. The final version-label patch received eight additional public footer checks. All 40 public assets matched the final package. Existing customers were not contacted, and SMS/payment delivery remains disconnected.
+After publication, 276 public HTTPS navigation states passed across all three roles, four viewport widths and both themes, with no browser errors or horizontal bottom-bar scrolling. All 40 public assets matched the release package. The two synthetic demo workspaces used for this verification were closed and their remaining sessions removed.
 
 These checks do not establish physical iOS/Android Push receipt, device GPU performance or owner/pilot acceptance. No real purchase, customer financial event or external message was used for presentation testing.
 
