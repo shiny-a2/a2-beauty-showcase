@@ -22,7 +22,17 @@ The monitor remains passive: it does not grant user permissions or lock salon ac
 
 Local validation passed 19 license tests, including both PHP authority contracts and the actual Beauty operator tool, plus the workspace build, six Core tests and 11 contract tests. Seven authority PHP suites and the existing admin browser regression passed, including mobile/desktop light/dark layouts. Product, HTTP and WordPress compatibility checks also passed from a clean source archive. All data was synthetic; no live authority or customer records were used.
 
-These are published source changes, not a production activation. Beauty remains on release 0.26.0. Product registration, commercial feature mapping, installation/account counting and live integration remain pending. Existing salon access is unchanged.
+These are published source changes, not a production activation. Beauty remains on release 0.26.0. Product registration, authoritative salon/license assignments, commercial limits and live integration remain pending. Existing salon access is unchanged.
+
+## Independent salon licenses and usage reports
+
+The commercial model now specifies one independent license per salon. New private operator tooling reads one salon's aggregate account usage without changing its data or access. It separates active team accounts, inactive accounts, customers, branch delegates and system accounts. Owners are included once in the team total. Linked salons retain their own license scope.
+
+An explicitly selected reporting policy can supply these aggregate counts to a product-aware license refresh. Separate private caches reject accidental reuse across salons or authority mappings. The report does not include customer names, contact details or financial records. This is account reporting, not a finalized billable-seat policy or global assignment registry.
+
+Local validation passed 273 Beauty tests, including eight new usage checks, 19 shared license tests, six Core tests, 11 contract tests and build, with no skips. Tests used synthetic PostgreSQL records and covered salon isolation, concurrent changes, enforced read-only transactions, cache separation and the actual operator tool. Refresh integration used a synthetic signed response; no live authority connection is claimed.
+
+The source is published; this tooling is not deployed or exposed in the salon panels. Beauty remains on 0.26.0 and license enforcement stays inactive.
 
 ## Tell us about your salon
 
