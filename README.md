@@ -2,7 +2,17 @@
 
 [Open the product catalogue](https://beauty.amiraliyaghouti.com) · [Sign in](https://beauty.amiraliyaghouti.com/login) · [Request a consultation](https://beauty.amiraliyaghouti.com/start)
 
-Release **0.30.7** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+Release **0.31.1** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+
+## Different hours for each weekday
+
+Managers with team access can give a specialist different hours on different days, add up to four shifts in a day, close a day or end work at midnight. For example, a morning shift and an afternoon shift leave a real gap in the booking calendar. The existing Persian clock controls are used throughout.
+
+Availability, new bookings, rescheduling and the demo secretary use the same booking calculation. A service and its preparation time must fit inside a working interval; existing reservations prevent an incompatible schedule change. Setup guidance checks the individual intervals rather than the total span of the day. Previous schedules keep their behavior until edited, and recorded appointment times and financial calculations are preserved.
+
+The editor retains drafts when another manager changes the schedule, offers a deliberate reload and retries an unchanged save once without repeating its effect. It reads back the saved schedule before closing, so reopening immediately shows the latest intervals. Validation covered the build, 333 Beauty tests, 11 shared CRM tests, 11 contract checks and 200 local interactive browser states across daily editing, Persian booking calendars and colleague setup. Mobile/desktop and light/dark layouts were inspected.
+
+After the final activation, 16 live interactive states and four synthetic schedule saves passed without page errors or horizontal overflow. The booking API offered no times in the split-shift gap or closed day, and all 43 public assets matched the release package. Test workspaces were deactivated. No live appointment, financial record or external message was created by these checks. Physical-device Push and broader commercial/pilot acceptance remain separate work.
 
 ## Review customer records that share a phone
 
