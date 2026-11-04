@@ -2,7 +2,13 @@
 
 [Open the product catalogue](https://beauty.amiraliyaghouti.com) · [Sign in](https://beauty.amiraliyaghouti.com/login) · [Request a consultation](https://beauty.amiraliyaghouti.com/start)
 
-Release **0.30.2** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+Release **0.30.3** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+
+## Find the assistant from the catalogue
+
+The product catalogue now links directly to the demo sign-in from a small animated assistant card. It explains that `visitor12` can enter without a password. The Intelligence chapter, role descriptions and FAQ distinguish the service and appointment guidance available in the manager and customer demos from AI features that still need separate activation. The assistant suggests candidate times; booking confirmation stays in the regular flow.
+
+Beauty 0.30.3 passed its build and all 300 automated checks. Local browser checks covered 155 catalogue and demo states, and 60 motion states including reduced motion and narrow screens. After publication, four light/dark mobile/desktop catalogue states passed interaction and layout checks, and the public catalogue assets matched the release package.
 
 ## An assistant that stays with the demo manager
 
