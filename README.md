@@ -2,7 +2,17 @@
 
 [Open the product catalogue](https://beauty.amiraliyaghouti.com) · [Sign in](https://beauty.amiraliyaghouti.com/login) · [Request a consultation](https://beauty.amiraliyaghouti.com/start)
 
-Release **0.31.1** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+Release **0.32.1** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+
+## Correct contact details while retaining consent history
+
+Reception and authorized CRM staff can correct a supplemental contact with recorded consent, explain why it changed and review the information before and after the correction. The history identifies the person who recorded the change and its time. Salon, service-line and private-contact access apply to both current details and historical entries.
+
+A changed phone or email does not inherit positive marketing consent: the current status becomes unknown. An existing opt-out remains in effect. Name-only corrections preserve the status, and edits to a linked customer's account phone follow the same rule. Marketing uses current consent, not old entries in the history. Repeated saves with the same receipt do not duplicate a correction.
+
+Validation passed 344 Beauty tests, 15 shared CRM tests, 11 contract checks and 96 local interactive browser states in light/dark mobile/desktop layouts. Checks included stale edits, lost-response retries, authorization changes, transactional failure recovery, history pagination and the marketing consumer. The final patch also ties health reporting to the packaged release version, with a regression for health/cache consistency. Historical edits are not backfilled; automatic customer merging and physical-device Push acceptance remain separate work.
+
+Live verification passed 16 interactive states and four synthetic contact corrections. All 43 served assets matched the release package. The test workspace was deactivated and its sessions removed; no live appointment, financial record or external message was created by these checks.
 
 ## Different hours for each weekday
 
@@ -20,7 +30,7 @@ Reception and authorized CRM staff can find other accessible records with the sa
 
 A shared phone can belong to family members; this review does not establish identity or merge customer records. Existing contact correction and consent protections remain. Loading, empty results, retry and dismissed requests have explicit behavior.
 
-The combined release preserves 0.30.6's demo secretary improvements. Build, 322 Beauty tests, 11 shared CRM tests and 11 contract checks passed. Local browser validation covered 56 shared-phone states, 52 contact-correction regression states and four inherited photo-review views across mobile/desktop and light/dark themes. After activation, 20 live interactive states passed without page errors or horizontal overflow, and 42 public assets matched the release package. The synthetic demo was deactivated; no appointment, financial record or external message was created by these live checks. Automatic merging and consent-history correction remain future work.
+The combined release preserves 0.30.6's demo secretary improvements. Build, 322 Beauty tests, 11 shared CRM tests and 11 contract checks passed. Local browser validation covered 56 shared-phone states, 52 contact-correction regression states and four inherited photo-review views across mobile/desktop and light/dark themes. After activation, 20 live interactive states passed without page errors or horizontal overflow, and 42 public assets matched the release package. The synthetic demo was deactivated; no appointment, financial record or external message was created by these live checks. Automatic merging remains future work; consent-history correction is included in 0.32.1 above.
 
 ## Safer service and appointment guidance in the demo
 
