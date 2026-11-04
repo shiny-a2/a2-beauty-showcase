@@ -2,15 +2,15 @@
 
 [Open the product catalogue](https://beauty.amiraliyaghouti.com) · [Sign in](https://beauty.amiraliyaghouti.com/login) · [Request a consultation](https://beauty.amiraliyaghouti.com/start)
 
-Release **0.29.0** connects customer booking, specialist schedules, reception and salon management in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+Release **0.30.0** connects customer booking, specialist schedules, reception, salon management and specialist rental accounting in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
 
-## In development: AI secretary and flexible specialist contracts
+## Specialist contracts and balances
 
-The 0.30.0 source candidate adds a Persian consultation chat for signed-in customers. A customer can optionally attach a photo with explicit consent and carry a suggested time into the normal booking confirmation flow. The assistant does not reserve an appointment on its own. Real AI replies require a separately activated, salon-bound A2 Intelligence service; the chat is not active on the live site yet.
+Release 0.30.0 lets salon managers choose a specialist's commission, fixed monthly desk rent, fixed rent plus the salon's percentage of net collected completed services, or percentage-only terms. Specialist statements and accounting views show rent received and the resulting balance for both sides. Terms, receipts and financial history remain scoped to each salon.
 
-Salon managers can choose a specialist's commission, fixed monthly desk rent, fixed rent plus the salon's percentage of net collected completed services, or percentage-only terms. The candidate shows rent received and the resulting balance for both sides in specialist statements and accounting views. Terms, receipts and financial history remain scoped to each salon.
+The 0.30.0 package also contains a Persian AI consultation chat for signed-in customers. It supports an optional photo with explicit consent and can carry a suggested time into the normal booking confirmation flow; it never reserves an appointment on its own. **Real AI replies are not active yet.** They require a separately deployed, salon-bound A2 Intelligence service and approved model, budget and quota.
 
-The candidate build and 300 automated Beauty checks passed against a local test database. Thirty-six interactive mobile and desktop states passed in light and dark themes, including the chat, photo, booking handoff, contract dialog and balance views. These were synthetic local checks. Production migration, live AI activation and customer use have not been verified. Version 0.29.0 remains the live release.
+Build and 300 automated Beauty checks passed against a local test database. Thirty-six local interactive mobile and desktop states passed in light and dark themes, including chat, photo, booking handoff, contract and balance views. After deployment, all 200 package files and 44 public HTTPS assets matched the release. Twelve fully rendered public browser states passed in both themes at mobile and desktop widths, without page errors or horizontal overflow. Existing records and access restrictions were checked for preservation during the schema upgrade. These checks used synthetic local finance data and public-only live browsing; authenticated live rent and real AI journeys remain unverified. No live financial record, customer AI call or external message was created for presentation tests.
 
 ## A vanity that becomes organized as you scroll
 
@@ -18,7 +18,7 @@ Release 0.29.0 replaces the small mirror display with a full vanity desk and fif
 
 The desk stays grounded, and mobile gives the scene more room. Reduced motion shows the arranged desk immediately; devices without WebGL receive a matching static illustration. Rendering settles when input stops and pauses when the scene is offscreen. The existing chapter links, keyboard navigation, themes, login and consultation links remain available.
 
-Build, five focused automated checks and sixty local catalogue browser states passed. The separate scene harness checked forward/reverse poses, theme changes, pointer settling, cleanup/remount and graphics fallback. Validation used headless Chrome with software WebGL, not physical-device GPU benchmarks. Version 0.29.0 is live. All sixty interactive catalogue states passed again over HTTPS after deployment, with no page errors or horizontal overflow. All 43 public assets matched the release package. Verification used public pages only, with no accounts, demo salons, financial records or external messages created.
+Build, five focused automated checks and sixty local catalogue browser states passed. The separate scene harness checked forward/reverse poses, theme changes, pointer settling, cleanup/remount and graphics fallback. Validation used headless Chrome with software WebGL, not physical-device GPU benchmarks. Version 0.29.0 was the previous live release. All sixty interactive catalogue states passed again over HTTPS after its deployment, with no page errors or horizontal overflow. All 43 public assets matched that release package. Verification used public pages only, with no accounts, demo salons, financial records or external messages created.
 
 ## Clearer panels for daily salon work
 
