@@ -2,7 +2,17 @@
 
 [Open the product catalogue](https://beauty.amiraliyaghouti.com) · [Sign in](https://beauty.amiraliyaghouti.com/login) · [Request a consultation](https://beauty.amiraliyaghouti.com/start)
 
-Release **0.33.1** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+Release **0.34.0** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+
+## Keep an existing follow-up up to date
+
+Reception and authorized CRM staff can change an open follow-up's subject and due time from the work queue or customer profile. The editor uses the Persian calendar and Tehran time. The same task stays linked to its customer and campaign, with its assignee preserved. Saving an unchanged form keeps the original precise due time.
+
+A stale form cannot overwrite another colleague's edit or reopen completed work. The draft stays visible with an explicit reload action, and retrying after a lost reply does not duplicate the update. Existing salon, service and assignment permissions apply; unsupported integrations do not gain this capability automatically. Task reassignment remains separate work.
+
+Build, 356 Beauty tests, 18 shared CRM tests and 11 contract checks passed. The browser checks covered 64 editing states and 60 work-queue regression states in light/dark themes at mobile/desktop widths, including the Persian date picker, stale drafts, lost replies, read retries and long text.
+
+The published release passed 24 additional live browser states and four synthetic task edits reread through the API. All 43 served assets matched the release. Live QA created no booking, financial record or external message.
 
 ## See the periods behind fixed rent
 
