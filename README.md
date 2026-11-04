@@ -2,13 +2,21 @@
 
 [Open the product catalogue](https://beauty.amiraliyaghouti.com) · [Sign in](https://beauty.amiraliyaghouti.com/login) · [Request a consultation](https://beauty.amiraliyaghouti.com/start)
 
-Release **0.27.2** connects customer booking, specialist schedules, reception and salon management in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+Release **0.28.0** connects customer booking, specialist schedules, reception and salon management in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+
+## Clearer panels for daily salon work
+
+Release 0.28.0 uses warmer Persian instructions and separates appointment time, service, people, status and actions into readable cards. Appointments are grouped by Tehran date; each group count refers to the current page. Quick period filters remain visible, with extra filters available on demand.
+
+CRM customer cards open the full file with a click or Enter. Follow-ups distinguish upcoming, overdue and completed work. Team schedules, reception shortcuts, services and notification context have clearer visual separation, using the existing Beauty illustrations and shared light/dark theme. Booking behavior and role permissions are retained.
+
+Build, 18 focused automated tests and 348 local browser states passed. The browser suites cover panel interactions, booking calendars, CRM work queues, notifications and custom date/dropdown controls, including keyboard use, long names, small screens and both themes. Version 0.28.0 is live. After deployment, 56 interactive HTTPS states passed on mobile/desktop in light/dark themes, including booking, rescheduling, cancellation, filter submission, customer files and reception. All 43 public assets matched the release package. No real customer messages or financial transactions were created.
 
 ## Booking dates and working hours
 
 Release 0.27.2 fixes editing working hours that end at midnight: managers can explicitly select the end of the day, while normal closing times retain exact minutes. Calendar month navigation preserves keyboard focus. A booking page re-rendered after Tehran midnight advances an expired day selection and clears its old time.
 
-All 47 focused automated checks passed, covering Persian date conversion and leap boundaries, past times and the five-minute lead boundary, working days, leave, preparation buffers, concurrent reservations, customer/provider overlap, rescheduling and cancellation. Thirty-six local interactive states passed on mobile/desktop in light/dark themes, with device zones set to Los Angeles and Tokyo. Browser/API journeys preserved Tehran booking times, rejected slots extending beyond closing, and released capacity after cancellation. Delayed availability responses preserved the latest selected day. No real customer messages or financial records were created. Version 0.27.2 is live. Thirty-two interactive HTTPS states passed after deployment, including saved midnight hours and actual booking, rescheduling, cancellation and restored availability in an isolated demo. All 43 public assets matched the release package.
+All 47 focused automated checks passed, covering Persian date conversion and leap boundaries, past times and the five-minute lead boundary, working days, leave, preparation buffers, concurrent reservations, customer/provider overlap, rescheduling and cancellation. Thirty-six local interactive states passed on mobile/desktop in light/dark themes, with device zones set to Los Angeles and Tokyo. Browser/API journeys preserved Tehran booking times, rejected slots extending beyond closing, and released capacity after cancellation. Delayed availability responses preserved the latest selected day. No real customer messages or financial records were created. Version 0.27.2 was deployed before the current panel refresh. Thirty-two interactive HTTPS states passed after deployment, including saved midnight hours and actual booking, rescheduling, cancellation and restored availability in an isolated demo. All 43 public assets matched the release package.
 
 ## Install Beauty on your device
 
