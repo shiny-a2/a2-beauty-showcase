@@ -4,6 +4,14 @@
 
 Release **0.29.0** connects customer booking, specialist schedules, reception and salon management in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
 
+## In development: AI secretary and flexible specialist contracts
+
+The 0.30.0 source candidate adds a Persian consultation chat for signed-in customers. A customer can optionally attach a photo with explicit consent and carry a suggested time into the normal booking confirmation flow. The assistant does not reserve an appointment on its own. Real AI replies require a separately activated, salon-bound A2 Intelligence service; the chat is not active on the live site yet.
+
+Salon managers can choose a specialist's commission, fixed monthly desk rent, fixed rent plus the salon's percentage of net collected completed services, or percentage-only terms. The candidate shows rent received and the resulting balance for both sides in specialist statements and accounting views. Terms, receipts and financial history remain scoped to each salon.
+
+The candidate build and 300 automated Beauty checks passed against a local test database. Thirty-six interactive mobile and desktop states passed in light and dark themes, including the chat, photo, booking handoff, contract dialog and balance views. These were synthetic local checks. Production migration, live AI activation and customer use have not been verified. Version 0.29.0 remains the live release.
+
 ## A vanity that becomes organized as you scroll
 
 Release 0.29.0 replaces the small mirror display with a full vanity desk and fifteen salon tools. Scrolling lifts the scattered brushes, bottles, makeup and accessories, aligns them in the air and places them neatly on the desk. Reversing the scroll retraces the same paths; brushes arrive after their holder.
