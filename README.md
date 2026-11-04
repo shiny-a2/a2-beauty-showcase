@@ -2,7 +2,15 @@
 
 [Open the product catalogue](https://beauty.amiraliyaghouti.com) · [Sign in](https://beauty.amiraliyaghouti.com/login) · [Request a consultation](https://beauty.amiraliyaghouti.com/start)
 
-Release **0.30.6** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+Release **0.30.7** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+
+## Review customer records that share a phone
+
+Reception and authorized CRM staff can find other accessible records with the same phone, open a related profile and return to the same result page. Iranian mobile prefixes and Persian/Arabic digits are recognized through the shared CRM engine. Salon, service-line and private-contact permissions constrain both the source and results.
+
+A shared phone can belong to family members; this review does not establish identity or merge customer records. Existing contact correction and consent protections remain. Loading, empty results, retry and dismissed requests have explicit behavior.
+
+The combined release preserves 0.30.6's demo secretary improvements. Build, 322 Beauty tests, 11 shared CRM tests and 11 contract checks passed. Local browser validation covered 56 shared-phone states, 52 contact-correction regression states and four inherited photo-review views across mobile/desktop and light/dark themes. After activation, 20 live interactive states passed without page errors or horizontal overflow, and 42 public assets matched the release package. The synthetic demo was deactivated; no appointment, financial record or external message was created by these live checks. Automatic merging and consent-history correction remain future work.
 
 ## Safer service and appointment guidance in the demo
 
@@ -206,7 +214,7 @@ The salon club awards points for eligible completed services and net collections
 
 ## Intelligence — reporting and activation-scoped AI
 
-Proposed AI assistance covers campaign drafts, customer visit-pattern analysis and management summaries, with human review. These capabilities need separate implementation and activation; executable AI is not part of the current demo.
+Proposed AI assistance covers campaign drafts, customer visit-pattern analysis and management summaries, with human review. These capabilities need separate implementation and activation. The current demo includes the limited service-and-appointment assistant described above; it does not provide these proposed CRM or reporting capabilities.
 
 Managers can record bills, discounts, manual collections/refunds, staff commissions and settlements. Commission follows net collected amounts for completed services; original rule snapshots preserve past calculations. Repeated submissions do not duplicate financial records, and over-collection/refund limits are enforced.
 
