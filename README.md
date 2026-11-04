@@ -2,7 +2,15 @@
 
 [Open the product catalogue](https://beauty.amiraliyaghouti.com) · [Sign in](https://beauty.amiraliyaghouti.com/login) · [Request a consultation](https://beauty.amiraliyaghouti.com/start)
 
-Release **0.30.3** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+Release **0.30.4** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+
+## From a new colleague to a reconciled balance
+
+Beauty 0.30.4 guides managers from colleague creation through service assignment, working hours, the applicable commission or rental agreement and booking preview. Selecting percentage-only rental terms now shows only the salon percentage; fixed rent and service commission keep their own relevant fields and explanations. Current and scheduled contracts show separate effective dates, and specialist contract reads require the appropriate permission.
+
+Commission drafts stay with their original colleague and service when switching selections. Stale changes offer a refresh, dismissed dialogs stay closed after delayed responses, and rent receipt history continues beyond the first page. The update reuses the shared booking, CRM and finance paths without changing recorded balances or recurring-rent calculations. Dates display in Persian; existing rental billing periods still follow their established calendar pending a separate migration.
+
+The build, 306 Beauty tests, six Core tests and 11 contract tests passed. Local browser acceptance covered 264 interactive mobile/desktop light/dark states, including new-colleague booking, discounted billing, partial collection, payout, refund adjustment and the linked CRM record. After publication, 36 interactive live manager states passed without page errors or horizontal overflow, and 42 served assets matched the release. Financial journeys used synthetic local data; live checks created no appointment, financial transaction or external message. Physical-device and pilot acceptance remain separate.
 
 ## Shared manager agent preview
 
