@@ -2,7 +2,15 @@
 
 [Open the product catalogue](https://beauty.amiraliyaghouti.com) · [Sign in](https://beauty.amiraliyaghouti.com/login) · [Request a consultation](https://beauty.amiraliyaghouti.com/start)
 
-Release **0.30.4** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+Release **0.30.5** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+
+## Correct a customer contact without changing their account
+
+Beauty 0.30.5 lets authorized CRM and reception staff correct supplemental contact names, phone numbers and email addresses through the shared A2 CRM engine. Separate cards distinguish account-owned details, additional contacts and private information. The existing account editor remains available only to staff with the corresponding permission; contacts with recorded consent remain protected from this correction form.
+
+Stale edits keep the draft and offer an explicit refresh. Retrying after a lost response records the correction once, and closing a dialog prevents a delayed save from reopening it. Corrections retain their salon and service scope, with an audit entry. Duplicate contact merging and consent-history correction remain separate planned work.
+
+The build, 313 Beauty tests, nine shared CRM tests and 11 contract tests passed. Fifty-two local browser states covered manager/reception flows, identity synchronization, stale edits, connection loss, long values and dismissal in both themes at mobile/desktop widths. After release, 12 live interactive states and four synthetic contact corrections passed, and 42 served assets matched the package. No appointment, financial record or external message was created by these live checks. Independent applications keep their current CRM package until separately upgraded.
 
 ## From a new colleague to a reconciled balance
 
