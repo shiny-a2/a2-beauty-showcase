@@ -2,7 +2,13 @@
 
 [Open the product catalogue](https://beauty.amiraliyaghouti.com) · [Sign in](https://beauty.amiraliyaghouti.com/login) · [Request a consultation](https://beauty.amiraliyaghouti.com/start)
 
-Release **0.27.1** connects customer booking, specialist schedules, reception and salon management in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+Release **0.27.2** connects customer booking, specialist schedules, reception and salon management in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+
+## Booking dates and working hours
+
+Release 0.27.2 fixes editing working hours that end at midnight: managers can explicitly select the end of the day, while normal closing times retain exact minutes. Calendar month navigation preserves keyboard focus. A booking page re-rendered after Tehran midnight advances an expired day selection and clears its old time.
+
+All 47 focused automated checks passed, covering Persian date conversion and leap boundaries, past times and the five-minute lead boundary, working days, leave, preparation buffers, concurrent reservations, customer/provider overlap, rescheduling and cancellation. Thirty-six local interactive states passed on mobile/desktop in light/dark themes, with device zones set to Los Angeles and Tokyo. Browser/API journeys preserved Tehran booking times, rejected slots extending beyond closing, and released capacity after cancellation. Delayed availability responses preserved the latest selected day. No real customer messages or financial records were created. Version 0.27.2 is live. Thirty-two interactive HTTPS states passed after deployment, including saved midnight hours and actual booking, rescheduling, cancellation and restored availability in an isolated demo. All 43 public assets matched the release package.
 
 ## Install Beauty on your device
 
@@ -10,7 +16,7 @@ Release 0.27.1 adds a compact install invitation inside the manager, reception, 
 
 The invitation uses the existing appearance and theme controls. Installing does not grant notification permission automatically, and current salon information and booking still require internet access.
 
-The build, 13 focused regression checks and 75 local browser checks passed. Browser install events and device user agents were simulated; physical-device installation remains unverified. Version 0.27.1 is live. After deployment, 48 interactive HTTPS states passed across all four roles, both themes and mobile/desktop with no page errors or horizontal overflow. All 43 public assets matched the release package. No real customer messages or financial transactions were created.
+The build, 13 focused regression checks and 75 local browser checks passed. Browser install events and device user agents were simulated; physical-device installation remains unverified. At the 0.27.1 deployment, 48 interactive HTTPS states passed across all four roles, both themes and mobile/desktop with no page errors or horizontal overflow. All 43 public assets matched the release package. No real customer messages or financial transactions were created.
 
 ## Notification center
 
