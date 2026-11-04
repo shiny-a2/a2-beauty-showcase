@@ -2,7 +2,13 @@
 
 [Open the product catalogue](https://beauty.amiraliyaghouti.com) · [Sign in](https://beauty.amiraliyaghouti.com/login) · [Request a consultation](https://beauty.amiraliyaghouti.com/start)
 
-Release **0.30.5** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+Release **0.30.6** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+
+## Safer service and appointment guidance in the demo
+
+When a customer names several different services, the AI secretary no longer offers times for an arbitrary one. It checks availability across more eligible specialists, orders the suggested times and asks the customer to confirm the final choice in the normal booking flow. Answers based on an uploaded photo now visibly explain that a salon specialist must review the image before a final decision. This update does not add a staff review queue.
+
+The limited demo AI budget and access scope are unchanged. The shared manager agent for CRM reports and approved follow-ups remains a separate preview. The Beauty build and all 314 local tests passed; the photo notice was inspected in light and dark at mobile and desktop widths. After activation, 42 public assets matched the release package and four public page states opened without page errors or horizontal overflow. The live authenticated photo conversation was not exercised during this release check.
 
 ## Correct a customer contact without changing their account
 
