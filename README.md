@@ -2,7 +2,15 @@
 
 [Open the product catalogue](https://beauty.amiraliyaghouti.com) · [Sign in](https://beauty.amiraliyaghouti.com/login) · [Request a consultation](https://beauty.amiraliyaghouti.com/start)
 
-Release **0.27.0** connects customer booking, specialist schedules, reception and salon management in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+Release **0.27.1** connects customer booking, specialist schedules, reception and salon management in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+
+## Install Beauty on your device
+
+Release 0.27.1 adds a compact install invitation inside the manager, reception, specialist and customer panels. Supported browsers offer installation after a click; iPhone and Android users can open device-specific home-screen guidance. Later hides the invitation for seven days in that browser. It stays hidden when Beauty is already running as an installed app, and it preserves work in progress.
+
+The invitation uses the existing appearance and theme controls. Installing does not grant notification permission automatically, and current salon information and booking still require internet access.
+
+The build, 13 focused regression checks and 75 local browser checks passed. Browser install events and device user agents were simulated; physical-device installation remains unverified. Version 0.27.1 is live. After deployment, 48 interactive HTTPS states passed across all four roles, both themes and mobile/desktop with no page errors or horizontal overflow. All 43 public assets matched the release package. No real customer messages or financial transactions were created.
 
 ## Notification center
 
@@ -10,7 +18,7 @@ Release 0.27.0 adds an unread bell and a shared notification center for salon ma
 
 Day-before and one-hour reminders use the existing delivery worker. An overdue appointment prompts authorized staff to check attendance; it never automatically marks a customer absent. The customer is notified of no-show only after a permitted staff member records it. Repeated processing does not duplicate the same reminder stage, and cancelled, rescheduled, reassigned or no-longer-authorized delivery is suppressed. Historical reminder wording clearly distinguishes an old message from the current appointment state.
 
-Local validation covered 294 distinct Beauty checks and 96 interactive browser states across four roles, mobile/desktop and light/dark themes. Build and shared-module checks passed. No real customer messages or financial transactions were used. Version 0.27.0 is now live. After deployment, 96 interactive HTTPS states passed across four roles, both themes and mobile/desktop. The live worker generated both reminder stages in isolated demos; filters, appointment details, reading state and unread badges worked without page errors or horizontal overflow. All 42 public assets matched the release package. Test salons were deactivated after verification. Real-device Push receipt and SMS activation remain pending.
+Local validation covered 294 distinct Beauty checks and 96 interactive browser states across four roles, mobile/desktop and light/dark themes. Build and shared-module checks passed. No real customer messages or financial transactions were used. At the 0.27.0 deployment, 96 interactive HTTPS states passed across four roles, both themes and mobile/desktop. The live worker generated both reminder stages in isolated demos; filters, appointment details, reading state and unread badges worked without page errors or horizontal overflow. All 42 public assets matched the release package. Test salons were deactivated after verification. Real-device Push receipt and SMS activation remain pending.
 
 ## Reception, CRM and cashier access
 
