@@ -2,7 +2,15 @@
 
 [Open the product catalogue](https://beauty.amiraliyaghouti.com) · [Sign in](https://beauty.amiraliyaghouti.com/login) · [Request a consultation](https://beauty.amiraliyaghouti.com/start)
 
-Release **0.28.0** connects customer booking, specialist schedules, reception and salon management in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+Release **0.29.0** connects customer booking, specialist schedules, reception and salon management in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+
+## A vanity that becomes organized as you scroll
+
+Release 0.29.0 replaces the small mirror display with a full vanity desk and fifteen salon tools. Scrolling lifts the scattered brushes, bottles, makeup and accessories, aligns them in the air and places them neatly on the desk. Reversing the scroll retraces the same paths; brushes arrive after their holder.
+
+The desk stays grounded, and mobile gives the scene more room. Reduced motion shows the arranged desk immediately; devices without WebGL receive a matching static illustration. Rendering settles when input stops and pauses when the scene is offscreen. The existing chapter links, keyboard navigation, themes, login and consultation links remain available.
+
+Build, five focused automated checks and sixty local catalogue browser states passed. The separate scene harness checked forward/reverse poses, theme changes, pointer settling, cleanup/remount and graphics fallback. Validation used headless Chrome with software WebGL, not physical-device GPU benchmarks. Version 0.29.0 is live. All sixty interactive catalogue states passed again over HTTPS after deployment, with no page errors or horizontal overflow. All 43 public assets matched the release package. Verification used public pages only, with no accounts, demo salons, financial records or external messages created.
 
 ## Clearer panels for daily salon work
 
@@ -10,7 +18,7 @@ Release 0.28.0 uses warmer Persian instructions and separates appointment time, 
 
 CRM customer cards open the full file with a click or Enter. Follow-ups distinguish upcoming, overdue and completed work. Team schedules, reception shortcuts, services and notification context have clearer visual separation, using the existing Beauty illustrations and shared light/dark theme. Booking behavior and role permissions are retained.
 
-Build, 18 focused automated tests and 348 local browser states passed. The browser suites cover panel interactions, booking calendars, CRM work queues, notifications and custom date/dropdown controls, including keyboard use, long names, small screens and both themes. Version 0.28.0 is live. After deployment, 56 interactive HTTPS states passed on mobile/desktop in light/dark themes, including booking, rescheduling, cancellation, filter submission, customer files and reception. All 43 public assets matched the release package. No real customer messages or financial transactions were created.
+Build, 18 focused automated tests and 348 local browser states passed. The browser suites cover panel interactions, booking calendars, CRM work queues, notifications and custom date/dropdown controls, including keyboard use, long names, small screens and both themes. Version 0.28.0 was deployed before the current vanity-scene update. After deployment, 56 interactive HTTPS states passed on mobile/desktop in light/dark themes, including booking, rescheduling, cancellation, filter submission, customer files and reception. All 43 public assets matched the release package. No real customer messages or financial transactions were created.
 
 ## Booking dates and working hours
 
