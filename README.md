@@ -2,15 +2,15 @@
 
 [Open the product catalogue](https://beauty.amiraliyaghouti.com) · [Sign in](https://beauty.amiraliyaghouti.com/login) · [Request a consultation](https://beauty.amiraliyaghouti.com/start)
 
-Release **0.26.0** connects customer booking, specialist schedules, reception and salon management in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+Release **0.27.0** connects customer booking, specialist schedules, reception and salon management in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
 
-## Notification center — next-release source
+## Notification center
 
-The 0.27.0 source candidate adds an unread bell and a shared notification center for salon managers, reception, specialists and customers. Filters separate unread messages, appointment reminders, attendance and booking changes. Cards show the current service, time and status, with relevant customer/specialist context and direct appointment details. Authorized staff can confirm completion or no-show through the existing booking workflow.
+Release 0.27.0 adds an unread bell and a shared notification center for salon managers, reception, specialists and customers. Filters separate unread messages, appointment reminders, attendance and booking changes. Cards show the current service, time and status, with relevant customer/specialist context and direct appointment details. Authorized staff can confirm completion or no-show through the existing booking workflow.
 
 Day-before and one-hour reminders use the existing delivery worker. An overdue appointment prompts authorized staff to check attendance; it never automatically marks a customer absent. The customer is notified of no-show only after a permitted staff member records it. Repeated processing does not duplicate the same reminder stage, and cancelled, rescheduled, reassigned or no-longer-authorized delivery is suppressed. Historical reminder wording clearly distinguishes an old message from the current appointment state.
 
-Local validation covered 294 distinct Beauty checks and 96 interactive browser states across four roles, mobile/desktop and light/dark themes. Build and shared-module checks passed. No real customer messages or financial transactions were used. This is published source preparation, not a live activation: the deployed product remains 0.26.0. Real-device Push verification and SMS activation remain pending.
+Local validation covered 294 distinct Beauty checks and 96 interactive browser states across four roles, mobile/desktop and light/dark themes. Build and shared-module checks passed. No real customer messages or financial transactions were used. Version 0.27.0 is now live. After deployment, 96 interactive HTTPS states passed across four roles, both themes and mobile/desktop. The live worker generated both reminder stages in isolated demos; filters, appointment details, reading state and unread badges worked without page errors or horizontal overflow. All 42 public assets matched the release package. Test salons were deactivated after verification. Real-device Push receipt and SMS activation remain pending.
 
 ## Reception, CRM and cashier access
 
@@ -30,7 +30,7 @@ The monitor remains passive: it does not grant user permissions or lock salon ac
 
 Local validation passed 19 license tests, including both PHP authority contracts and the actual Beauty operator tool, plus the workspace build, six Core tests and 11 contract tests. Seven authority PHP suites and the existing admin browser regression passed, including mobile/desktop light/dark layouts. Product, HTTP and WordPress compatibility checks also passed from a clean source archive. All data was synthetic; no live authority or customer records were used.
 
-These are published source changes, not a production activation. Beauty remains on release 0.26.0. Real product/salon provisioning, commercial limits and live integration remain pending. Existing salon access is unchanged.
+The shared licensing groundwork is packaged with Beauty 0.27.0, but central product/salon provisioning, commercial limits and live authority integration remain pending. The monitor is not activated and existing salon access is unchanged.
 
 ## Independent salon licenses and usage reports
 
@@ -40,7 +40,7 @@ An explicitly selected reporting policy can supply these aggregate counts to a p
 
 Local validation passed 273 Beauty tests, including eight new usage checks, 19 shared license tests, six Core tests, 11 contract tests and build, with no skips. Tests used synthetic PostgreSQL records and covered salon isolation, concurrent changes, enforced read-only transactions, cache separation and the actual operator tool. Refresh integration used a synthetic signed response; no live authority connection is claimed.
 
-The source is published; this tooling is not deployed or exposed in the salon panels. Beauty remains on 0.26.0 and license enforcement stays inactive.
+The private tooling is packaged with 0.27.0 and is not exposed in salon panels. No live usage refresh is activated and license enforcement stays inactive.
 
 ## Audited salon license assignments
 
@@ -50,7 +50,7 @@ Expected revisions reject stale changes, exact retries do not duplicate records,
 
 Local validation passed 284 Beauty tests, 19 shared license tests, six Core tests, 11 contract tests and build, with no skips. Coverage includes competing salon registrations, duplicate identifiers, denied permissions, rollback on audit/history failure, the private command and repeatable migration preserving existing accounts. Demo cleanup also protects salons with assignment history. All records were synthetic.
 
-This source candidate requires an additive database migration. It has not been applied to production and no real salon has been assigned through this work. The live Beauty application remains 0.26.0; salon panels and commercial access remain unchanged.
+The additive local registry structures are included in the 0.27.0 update, with access restricted to private maintenance tooling. No real salon has been assigned through this work, no central license was issued or changed, and commercial access remains unchanged.
 
 ## Tell us about your salon
 
@@ -144,13 +144,13 @@ Beauty includes an in-app inbox, browser Push configuration and installation gui
 
 Kavenegar template settings are available, but real SMS delivery and OTP login remain disconnected. Online payment transport is also disconnected. Verified delivery-based or assisted recovery, platform MFA and broader commercial entitlement enforcement remain future work.
 
-## Release validation
+## Earlier reception validation
 
 Local validation covered 265 distinct Beauty tests across the full suite and focused reception/migration runs, six shared Core tests, 11 contract tests and build. Checks included independent permissions, initial-password onboarding, cross-salon denial, CRM commands, cashier restrictions, retries/refund limits, queued-access revocation, booking notifications, migration replay and recovery compatibility.
 
 Sixty-two reception browser states and 147 catalogue/login/existing-role states passed across light/dark desktop and mobile layouts, with no page errors or horizontal overflow. Interactive checks included account creation and editing, focus, separate modules, a synthetic collection confirmation, read-only cashier access, mobile menus and demo switching. Service-worker replacement preserved an unsaved draft. All financial and account records used for these checks were synthetic and local.
 
-After activation, all 41 public assets matched the release package and 36 public HTTPS browser states passed in both themes at desktop/mobile widths, without page errors or horizontal overflow. Seven private/source paths denied access and four protected APIs required authentication. Public checks made no API writes. Live authenticated workflows and external payment/message delivery are not claimed by these checks.
+After the earlier 0.26.0 activation, all 41 public assets matched the release package and 36 public HTTPS browser states passed in both themes at desktop/mobile widths, without page errors or horizontal overflow. Seven private/source paths denied access and four protected APIs required authentication. Public checks made no API writes. That earlier public-only check did not cover authenticated workflows. The 0.27.0 notification journey described above adds authenticated demo verification; external payment/message delivery remains unverified.
 
 These checks do not establish physical iOS/Android Push receipt, device GPU performance or owner/pilot acceptance. No real purchase, customer financial event or external message was used for presentation testing.
 
