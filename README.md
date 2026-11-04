@@ -4,6 +4,12 @@
 
 Release **0.30.3** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
 
+## Shared manager agent preview
+
+A disabled source candidate connects salon manager text chat to the same assistant core as Education. It can read authorized CRM reports and propose internal follow-ups; creating or completing a task requires the manager's explicit confirmation. The existing photo, catalog and booking assistant remains available on its current path.
+
+The candidate passed 31 focused Beauty regression tests, 15 shared integration checks with scripted model output and combined mobile/desktop light/dark interface checks. It has not been deployed; production access/runtime activation, durable chat and scheduled reporting remain pending. See the [shared platform engineering note](https://github.com/shiny-a2/a2-intelligence-showcase).
+
 ## Find the assistant from the catalogue
 
 The product catalogue now links directly to the demo sign-in from a small animated assistant card. It explains that `visitor12` can enter without a password. The Intelligence chapter, role descriptions and FAQ distinguish the service and appointment guidance available in the manager and customer demos from AI features that still need separate activation. The assistant suggests candidate times; booking confirmation stays in the regular flow.
