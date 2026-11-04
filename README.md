@@ -2,7 +2,17 @@
 
 [Open the product catalogue](https://beauty.amiraliyaghouti.com) · [Sign in](https://beauty.amiraliyaghouti.com/login) · [Request a consultation](https://beauty.amiraliyaghouti.com/start)
 
-Release **0.32.1** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+Release **0.33.1** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+
+## See the periods behind fixed rent
+
+Managers and specialists with access to their own statements can inspect the exact periods behind the fixed-rent total. Each row shows its start/end dates, governing contract start and fixed amount. More than twenty periods can be browsed, and a collapsible section keeps long statements manageable. Failed reads offer a retry for the same account and page; late responses cannot replace a dismissed or newer view.
+
+The total and its detail rows use the same calculation. Existing balances, payment records, service commissions and future contract start dates are preserved. Dates display in Persian; existing rental periods still follow their recorded Gregorian month boundaries. A future calendar conversion and first-month proration need a separate policy and compatible transition. Period rows explain a balance and are not payment receipts.
+
+Build, 350 Beauty tests, 15 shared CRM tests, 11 contract checks and 96 local interactive browser states passed. The local tests cover positive rent, more than twenty months, leap/year boundaries, agreement changes, exact rial totals and denied cross-account/salon access. Light/dark and mobile/desktop layouts, disclosure keyboard use, retry and dismissed responses were checked. The final patch removes an obsolete footer version label; ten focused checks and the 56 period/statement browser states passed again.
+
+The published release passed 32 additional read-only browser states across authorized manager and specialist views, and all 43 served assets matched the release. Empty test workspaces were deactivated after verification. Positive rent and long histories were tested locally; live checks created no booking, financial record or external message.
 
 ## Correct contact details while retaining consent history
 
