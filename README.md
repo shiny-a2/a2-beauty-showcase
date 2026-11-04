@@ -2,7 +2,13 @@
 
 [Open the product catalogue](https://beauty.amiraliyaghouti.com) · [Sign in](https://beauty.amiraliyaghouti.com/login) · [Request a consultation](https://beauty.amiraliyaghouti.com/start)
 
-Release **0.30.1** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+Release **0.30.2** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+
+## An assistant that stays with the demo manager
+
+The demo salon manager now sees a small animated mirror control on every workspace screen. It opens the AI assistant for questions about current services and candidate appointment times. Text works without a photo; an optional photo needs explicit consent. The assistant cannot read balances, sales or customer records, and it never confirms a booking. The existing overall demo spend cap and per-user quota also apply to manager conversations. AI remains disabled for managers of non-demo salons.
+
+Beauty 0.30.2 passed its build and all 300 automated checks. The scoped AI bridge passed its build and 14 focused checks. A live synthetic demo manager received a text-only AI response; four mobile/desktop light/dark states showed the launcher and opened conversation without page errors or horizontal overflow. Keyboard focus and reduced-motion behavior were checked. The test demo was deactivated, and the AI usage receipt settled below both demo caps. No appointment or salon financial record was created for this check.
 
 ## Specialist contracts and balances
 
