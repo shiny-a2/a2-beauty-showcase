@@ -10,6 +10,8 @@ Release 0.30.0 lets salon managers choose a specialist's commission, fixed month
 
 The 0.30.0 package also contains a Persian AI consultation chat for signed-in customers. It supports an optional photo with explicit consent and can carry a suggested time into the normal booking confirmation flow; it never reserves an appointment on its own. **Real AI replies are not active yet.** They require a separately deployed, salon-bound A2 Intelligence service and approved model, budget and quota.
 
+The next private-source update prepares that chat for demo customers through a separate capped Intelligence account. Local tests covered consent, photo submission, account separation and spend limits; four interactive desktop and mobile theme states passed without page errors or horizontal overflow. This update has not been deployed, and the public demo still does not return real AI replies.
+
 Build and 300 automated Beauty checks passed against a local test database. Thirty-six local interactive mobile and desktop states passed in light and dark themes, including chat, photo, booking handoff, contract and balance views. After deployment, all 200 package files and 44 public HTTPS assets matched the release. Twelve fully rendered public browser states passed in both themes at mobile and desktop widths, without page errors or horizontal overflow. Existing records and access restrictions were checked for preservation during the schema upgrade. These checks used synthetic local finance data and public-only live browsing; authenticated live rent and real AI journeys remain unverified. No live financial record, customer AI call or external message was created for presentation tests.
 
 ## A vanity that becomes organized as you scroll
