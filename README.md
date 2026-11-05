@@ -2,7 +2,17 @@
 
 [Open the product catalogue](https://beauty.amiraliyaghouti.com) · [Sign in](https://beauty.amiraliyaghouti.com/login) · [Request a consultation](https://beauty.amiraliyaghouti.com/start)
 
-Release **0.35.0** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+Release **0.36.0** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+
+## Follow up after a completed service
+
+Managers can set an optional aftercare delay for each service and use it in an internal CRM campaign. The campaign considers the customer's latest completed visit to the selected service, starting at its configured due time and continuing for seven days. Existing opt-outs, marketing exclusions, future bookings, open follow-ups and contact cooldowns still apply. The same visit cannot generate another aftercare task through a different campaign.
+
+Aftercare starts disabled for existing services, and saving a delay does not activate a campaign. Staff explicitly create and activate a draft, with source-visit details available in the campaign report. The suggested text asks the team to review the salon's approved instructions and the customer's experience; it does not generate treatment advice or send advertisements. Service-setting conflicts offer an explicit reload, and the form reuses the Persian calendar and custom dropdowns.
+
+Build, 373 Beauty tests, 21 shared CRM tests and 11 contract checks passed. The local browser matrix passed 48 interactive states in light/dark themes at mobile and desktop widths. Additional focused checks verified that recorded source visits remain compatible with demo cleanup. Positive aftercare generation, consent exclusions and concurrent execution were tested with local synthetic data.
+
+The published release passed 32 live browser states, including four service-setting saves and four unactivated draft campaigns. All 43 served assets matched the release. Live checks created no appointment, financial record, CRM task or external message; the test workspace was deactivated afterward. Physical-device Push and salon pilot acceptance remain separate checks.
 
 ## Give each follow-up a responsible colleague
 
