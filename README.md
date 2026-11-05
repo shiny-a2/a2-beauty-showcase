@@ -2,7 +2,17 @@
 
 [Open the product catalogue](https://beauty.amiraliyaghouti.com) · [Sign in](https://beauty.amiraliyaghouti.com/login) · [Request a consultation](https://beauty.amiraliyaghouti.com/start)
 
-Release **0.38.0** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+Release **0.39.0** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+
+## Book a service again from appointment history
+
+Customers and authorized reception or management staff can start a fresh booking from a completed, cancelled or missed appointment. The current service price and duration are shown, the available original specialist is selected and the customer chooses a new time before confirming. The booking summary now includes service duration.
+
+If a service is unavailable, the page explains how to select another. If the previous specialist no longer offers it, choosing a replacement is explicit. Current access and appointment ownership are checked again, and the original appointment remains unchanged.
+
+Build, 391 Beauty tests, 21 shared Core tests and 11 contract checks passed. Across light/dark mobile and desktop layouts, 76 local rebooking states and 80 booking/search regression states passed. Twelve new appointments were created through the local UI and API with current-price, duration and source-record checks. These used synthetic local data.
+
+After publication, 48 live interface states passed for customers, managers and receptionists in both themes and widths. History/detail reads used browser-only synthetic fixtures; sessions, catalogue and availability came from the live service. All 45 served assets matched. End-to-end booking creation was verified locally, not on production; the live empty test salon was deactivated with no appointments, financial records or outbound messages.
 
 ## Find the right service more easily
 
