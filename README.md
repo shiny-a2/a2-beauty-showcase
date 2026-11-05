@@ -2,7 +2,17 @@
 
 [Open the product catalogue](https://beauty.amiraliyaghouti.com) · [Sign in](https://beauty.amiraliyaghouti.com/login) · [Request a consultation](https://beauty.amiraliyaghouti.com/start)
 
-Release **0.37.1** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+Release **0.38.0** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+
+## Find the right service more easily
+
+Booking now includes instant Persian search across service names, descriptions and categories. Common Arabic/Persian spelling and digit variants work together, and the current category keeps the results relevant. Clear result counts and an empty-state message help customers find their way back.
+
+Searching keeps the chosen service, specialist and time. If a selected service falls outside the results, a notice explains that the choice is still in the appointment summary. The search stays inside the browser and does not send the typed words to the server. Existing appointments keep their original service when changing the time.
+
+Build, 387 Beauty tests, 21 shared CRM tests and 11 contract checks passed. Forty-four local search states and 36 calendar/booking states passed across light/dark themes at mobile and desktop widths, including keyboard use, empty results, preserved selections, rescheduling and cancelled-slot availability. Actual booking creation in these checks used local synthetic data.
+
+After publication, 32 live interactive states passed in customer and manager panels across both themes and widths. All 44 served assets matched the release. The synthetic workspace was deactivated and its sessions removed; live checks created no appointments, financial records or external messages.
 
 ## Edit services without overwriting a colleague's changes
 
