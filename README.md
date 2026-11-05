@@ -2,7 +2,17 @@
 
 [Open the product catalogue](https://beauty.amiraliyaghouti.com) · [Sign in](https://beauty.amiraliyaghouti.com/login) · [Request a consultation](https://beauty.amiraliyaghouti.com/start)
 
-Release **0.36.0** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+Release **0.37.1** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+
+## Edit services without overwriting a colleague's changes
+
+Service editing now checks the definition and assigned specialists together before saving. If another manager has changed the service, the form keeps the current draft and offers an explicit reload. A changed price, duration or specialist assignment does not rewrite existing appointment snapshots.
+
+Retrying an unchanged save after a lost reply does not create another service or repeat its audit event. If the draft changes while the previous result is uncertain, staff can check that earlier save first and then continue editing the confirmed service. The saved form stays open until its list refreshes, so immediately reopening it shows the saved values. A failed refresh also retains the confirmed service identity.
+
+The implementation passed 382 Beauty tests, 21 shared CRM tests and 11 contract checks. The final interface patch passed 30 focused regression checks, 56 service-editor browser states and the existing 112-state colleague onboarding and booking-to-refund journey. Browser checks covered both themes and mobile/desktop widths, with synthetic local data and no external messages. The quick-reopen fix followed a failure found during the first live check; that failed result is not counted as a successful release check.
+
+The published 0.37.1 release passed 20 live browser states with four synthetic service-description saves and immediate rereads. All 43 served assets matched. Both test workspaces were deactivated and their sessions removed; live checks created no appointment, financial record or external message.
 
 ## Follow up after a completed service
 
