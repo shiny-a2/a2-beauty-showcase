@@ -2,7 +2,19 @@
 
 [Open the product catalogue](https://beauty.amiraliyaghouti.com) · [Sign in](https://beauty.amiraliyaghouti.com/login) · [Request a consultation](https://beauty.amiraliyaghouti.com/start)
 
-Release **0.39.0** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+Release **0.40.0** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+
+## A clearer first look at the salon experience
+
+The catalogue now offers an interactive preview of four roles: salon management, reception, specialists and customers. Clearly marked example agendas and handoffs explain how the product fits each person's day. Keyboard navigation and reduced motion are supported; the preview does not create accounts, appointments or payments.
+
+The sign-in page brings the salon identity into a sculpted arch and layered beauty tools, with a compact mobile layout. The original scroll-driven vanity remains, alongside clearer feature sections and a direct link to explore the role preview. SMS, payment and AI activation boundaries remain explicit.
+
+Public files now use negotiated compression and browser revalidation; account APIs remain uncached. Seven measured response bodies total 920,269 uncompressed bytes versus 234,751 Brotli bytes, a 74.5% reduction against uncompressed delivery. This measures file bytes, not page-load time or real-phone performance; the 3D scene already supported gzip in earlier releases.
+
+Build, 393 Beauty tests, 21 shared Core tests and 11 contract checks passed. The local matrix passed 295 browser states, including the new preview/login at four widths in both themes, scroll and fallback graphics, keyboard/reduced motion, normal login, isolated demos and existing panels. Physical-device graphics performance and owner design acceptance remain separate.
+
+After publication, all 47 served assets matched and 80 public studio/login states plus 60 scroll/graphics states passed over HTTPS. Live Brotli delivery, conditional 304 responses and the uncached session boundary were verified. The checked text/background token pairs exceed 4.5:1 in both themes. Public checks created no account, demo, appointment, payment or message.
 
 ## Book a service again from appointment history
 
