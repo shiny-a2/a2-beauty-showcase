@@ -2,7 +2,15 @@
 
 [Open the product catalogue](https://beauty.amiraliyaghouti.com) · [Sign in](https://beauty.amiraliyaghouti.com/login) · [Request a consultation](https://beauty.amiraliyaghouti.com/start)
 
-Release **0.40.0** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+Release **0.40.1** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+
+## Persian package names — 0.40.1
+
+The catalogue now uses **پایه** for daily salon work, **رشد** for customer relationships and **هوشمند** for reporting and activation-scoped AI. The same names appear in chapter navigation, consultation choices and the team’s request list. Navigation follows Persian reading direction. Saved requests and existing links stay compatible; package scope, activation requirements and pricing are unchanged.
+
+The patch passed the build, four focused asset/worker checks, 36 local presentation states and 60 existing scroll/motion states. Checks covered light/dark themes, desktop/mobile widths, keyboard navigation and open/selected package choices. Operator request labels used browser-only sample records. Database behavior was unchanged and its migration test was not run for this copy update.
+
+After publication, 36 focused browser states also passed over HTTPS and all 48 served assets matched the release. No live leads, accounts, bookings or payments were created for these checks.
 
 ## A clearer first look at the salon experience
 
@@ -144,7 +152,7 @@ The candidate passed 31 focused Beauty regression tests, 15 shared integration c
 
 ## Find the assistant from the catalogue
 
-The product catalogue now links directly to the demo sign-in from a small animated assistant card. It explains that `visitor12` can enter without a password. The Intelligence chapter, role descriptions and FAQ distinguish the service and appointment guidance available in the manager and customer demos from AI features that still need separate activation. The assistant suggests candidate times; booking confirmation stays in the regular flow.
+The product catalogue now links directly to the demo sign-in from a small animated assistant card. It explains that `visitor12` can enter without a password. The هوشمند chapter, role descriptions and FAQ distinguish the service and appointment guidance available in the manager and customer demos from AI features that still need separate activation. The assistant suggests candidate times; booking confirmation stays in the regular flow.
 
 Beauty 0.30.3 passed its build and all 300 automated checks. Local browser checks covered 155 catalogue and demo states, and 60 motion states including reduced motion and narrow screens. After publication, four light/dark mobile/desktop catalogue states passed interaction and layout checks, and the public catalogue assets matched the release package.
 
@@ -248,17 +256,17 @@ Version 0.25 replaces public account creation with a consultation request. Visit
 
 Platform management opens on a request inbox with new, in-progress and closed states, contact details, follow-up notes and filtering. Operators can create salon accounts after coordination; each owner must change the initial password. Salon accounts cannot read this inbox or create new salon workspaces.
 
-The catalogue now describes SMS, online payments and AI capabilities as separately activated offerings. Proposed Intelligence capabilities include campaign copy assistance, customer visit-pattern analysis and management summaries. These require implementation/activation; they do not run in the current demo. Scope, activation conditions and pricing are agreed before a contract.
+The catalogue now describes SMS, online payments and AI capabilities as separately activated offerings. Proposed هوشمند capabilities include campaign copy assistance, customer visit-pattern analysis and management summaries. These require implementation/activation; they do not run in the current demo. Scope, activation conditions and pricing are agreed before a contract.
 
 ## A catalogue that follows your scroll
 
-Version 0.24 keeps a three-dimensional beauty studio beside the product story. Scrolling through the introduction, Essential, Growth and Intelligence changes the studio angle, accessory positions and artwork while the feature text stays readable. Scrolling back restores earlier poses. Chapter links support the keyboard and show the current section.
+Version 0.24 keeps a three-dimensional beauty studio beside the product story. Scrolling through the introduction, پایه, رشد and هوشمند changes the studio angle, accessory positions and artwork while the feature text stays readable. Scrolling back restores earlier poses. Chapter links support the keyboard and show the current section.
 
 The studio adapts to mobile, desktop and short landscape layouts. A Reduce motion control remembers the visitor's choice, and the device's reduced-motion setting takes precedence. If browser graphics are unavailable, an illustrated fallback remains. Rendering settles when input stops and pauses while the scene is out of view. Native scrolling, login links and the existing theme control remain available.
 
 ## Explore the product
 
-The catalogue presents three groups of capabilities: **Essential**, **Growth** and **Intelligence**. Final package composition and pricing are agreed during consultation. Features marked as requiring activation are not represented as live demo functionality.
+The catalogue presents three groups of capabilities: **پایه**, **رشد** and **هوشمند**. Final package composition and pricing are agreed during consultation. Features marked as requiring activation are not represented as live demo functionality.
 
 Enter **visitor12** on the login page and leave the password empty to open an isolated, populated demo. Switch between manager, reception, specialist and customer panels to explore related services, appointments, CRM records, marketing work, financial reports and loyalty gifts. A connected sample branch demonstrates permission-based access.
 
@@ -298,7 +306,7 @@ Version 0.19.1 minimizes new Beauty access records: query parameters and referre
 
 Version 0.19 adds an explicit operator workflow for reviewing and removing old demo workspaces after their access period and an additional seven-day recovery grace. Cleanup preserves connected branch groups, excludes valid or permanent salons and requires a matching preview plus a backup before removal. The ordinary web service receives no extra deletion privileges. This is a maintenance command, not an automatic background purge; ongoing capacity checks and backup custody remain operational responsibilities.
 
-## Essential — daily salon work
+## پایه — daily salon work
 
 Platform operators create salon accounts after coordination. Owners then follow setup tasks for specialists, services and prices, working hours and the salon address. Progress reflects current configuration: deactivating a specialist can make a service need attention again. Owners can copy their booking link and preview the customer journey.
 
@@ -306,7 +314,7 @@ Customers choose a service, specialist and appointment time, then manage their o
 
 Shared Persian date, time and searchable selection controls work across salon and platform forms. They support keyboard operation and local digits while preserving the booking time contract. The interface uses Persian typography, right-to-left layouts, light/dark themes and reduced-motion behavior. The catalogue includes dimensional beauty artwork with a static fallback.
 
-## Growth — customer relationships and loyalty
+## رشد — customer relationships and loyalty
 
 The same customer record connects appointments, service-specific CRM history and follow-ups. A manager assigned to selected service lines sees only the authorized service context; common customer identity does not expose unrelated service notes.
 
@@ -314,7 +322,7 @@ Marketing creates internal CRM work for service recalls, inactive customers, fir
 
 The salon club awards points for eligible completed services and net collections after discounts/refunds. Managers configure general or service-specific rules, availability delays, expiry, recognition levels and non-cash gifts. Customers see their points and redeem gifts; managers record fulfillment. Refunds reconcile earned points, including deficits after prior redemption. Points are not money, and a gift does not automatically reserve an appointment or discount a bill. Birthday/referral campaigns are not connected in this release.
 
-## Intelligence — reporting and activation-scoped AI
+## هوشمند — reporting and activation-scoped AI
 
 Proposed AI assistance covers campaign drafts, customer visit-pattern analysis and management summaries, with human review. These capabilities need separate implementation and activation. The current demo includes the limited service-and-appointment assistant described above; it does not provide these proposed CRM or reporting capabilities.
 
