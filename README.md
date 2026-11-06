@@ -2,7 +2,17 @@
 
 [Open the product catalogue](https://beauty.amiraliyaghouti.com) · [Sign in](https://beauty.amiraliyaghouti.com/login) · [Request a consultation](https://beauty.amiraliyaghouti.com/start)
 
-Release **0.40.1** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+Release **0.41.0** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
+
+## Lighter startup and a familiar loading scene — 0.41.0
+
+The salon and platform interfaces now load bundled application code and styles. The catalogue's measured JavaScript requests drop from 22 to 3, and stylesheet requests from 7 to 1. Compressed main JavaScript is about 20% smaller, excluding the unchanged 3D scene. These are resource measurements, not a promise of identical speed on every connection or phone.
+
+While information loads, the catalogue's vanity table gently gathers its accessories into place in a short loop. It uses lightweight vector artwork and CSS motion rather than a second 3D engine. Reduced motion keeps the table still, hidden tabs pause the animation, and ready content appears without waiting for the loop to finish. A failed startup stops the movement and offers a clear retry. The initial status paints before application evaluation and decorative WebGL work.
+
+The build and all 395 Beauty checks passed. Local browser verification covered 302 loading, scroll, login, role and operator states in light/dark themes at desktop/mobile widths. Timing samples showed improved median readiness but variable cold-process results; physical-phone performance still needs device testing.
+
+After publication, 99 public loading and scroll states passed over HTTPS, and all 55 served assets matched the release. Slow and failed requests were simulated only in the test browser; no live accounts, leads, bookings or payments were created.
 
 ## Persian package names — 0.40.1
 
