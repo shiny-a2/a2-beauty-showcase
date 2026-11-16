@@ -4,6 +4,14 @@
 
 Release **0.41.0** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
 
+## Shared approval inbox foundation — development update
+
+The shared A2 platform now has a scoped proposal inbox and explicit reject/dismiss controls over existing encrypted receipts. Completed results remain reviewable after the approval deadline; expired pending proposals cannot run. Concurrent approval and dismissal resolve to one durable outcome, and dismissal never rolls back completed or uncertain work.
+
+The central build and 83 tests passed, with 20 focused checks and seven final lifecycle checks. Beauty's unchanged read-only adapter passed 13 local HTTP compatibility checks. Product effects were scripted; no paid AI or production record was used.
+
+This is a central prerequisite for the salon manager's work inbox, not a new Beauty screen or live release. Named CRM previews, current assignment/line permissions and the manager decision interface remain the next integration step. Beauty 0.44.0 is still the latest packaged source candidate; 0.41.0 remains the last verified live version.
+
 ## Daily assistant report and recovery — 0.44.0 candidate
 
 An enabled-only card in the salon and reception workbench lets staff request a daily summary, inspect a previous request or explicitly continue the same request. Status checks retrieve saved results without running the model. Pending, expired and unavailable results have distinct guidance; uncertain work is never presented as completed. Returning to the page requires fresh authorized retrieval, and logout clears the tab's request reference. Existing booking and CRM workflows remain the source of salon information.
