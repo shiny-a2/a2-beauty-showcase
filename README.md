@@ -4,6 +4,14 @@
 
 Release **0.41.0** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
 
+## Daily assistant report and recovery — 0.44.0 candidate
+
+An enabled-only card in the salon and reception workbench lets staff request a daily summary, inspect a previous request or explicitly continue the same request. Status checks retrieve saved results without running the model. Pending, expired and unavailable results have distinct guidance; uncertain work is never presented as completed. Returning to the page requires fresh authorized retrieval, and logout clears the tab's request reference. Existing booking and CRM workflows remain the source of salon information.
+
+The Beauty build and 425 tests passed, alongside the central build and 76 tests. The final interface passed 57 interactive checks in light/dark mobile/desktop layouts plus four existing logout regressions. Checks include keyboard focus, reload recovery, scope changes, safe text rendering and delayed responses. Twelve semantic text/surface pairs exceed 4.5:1. Model output was scripted; no paid AI or production records were used.
+
+This is published source progress, with production activation still pending and 0.41.0 the last verified live version. The card remains hidden until a salon's shared assistant is explicitly configured. Provider-uncertainty reconciliation, approval inboxes and autonomous staff actions are not enabled by this candidate.
+
 ## Reliable assistant report recovery — 0.43.1 candidate
 
 The read-only shared assistant now saves its report and completed answer so an interrupted request can recover the original result. In tested retry and concurrency cases, recovery did not call the model or charge usage again. Current staff access and assistant policy are checked again before delivery; changed requests conflict and expired results cannot reopen a paid operation. This improves the foundation for a useful salon assistant while retaining the existing booking and CRM ownership.
