@@ -4,13 +4,21 @@
 
 Release **0.41.0** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
 
+## Reviewed CRM follow-ups — 0.45.0 candidate
+
+The salon/reception workbench now connects to the shared proposal inbox. Staff can request an internal follow-up, review the actual customer, responsible colleague, service and Persian-calendar due time, then explicitly approve, reject or dismiss it. A changed preview or revoked access requires another review. Approved work uses the existing CRM engine; retrying a completed confirmation does not create a duplicate task. Uncertain outcomes remain visible for review.
+
+The Beauty build and 439 tests passed, including 14 cross-service checks with actual local proposal storage and CRM writes. The shared CRM engine passed 21 tests. The interface passed 69 interactive checks across light/dark mobile/desktop layouts; fourteen text/surface pairs meet 4.5:1. Coverage includes keyboard approval, disabled states, pagination, stale previews, safe text rendering, delayed responses and logout. AI output was scripted; no paid model or production record was used.
+
+This source candidate is disabled pending scoped assistant provisioning and production activation. It adds reviewed internal follow-up creation only. Automated booking/payment/message actions, notification attention and uncertain-result reconciliation remain future work. The last verified live version is 0.41.0.
+
 ## Shared approval inbox foundation — development update
 
 The shared A2 platform now has a scoped proposal inbox and explicit reject/dismiss controls over existing encrypted receipts. Completed results remain reviewable after the approval deadline; expired pending proposals cannot run. Concurrent approval and dismissal resolve to one durable outcome, and dismissal never rolls back completed or uncertain work.
 
 The central build and 83 tests passed, with 20 focused checks and seven final lifecycle checks. Beauty's unchanged read-only adapter passed 13 local HTTP compatibility checks. Product effects were scripted; no paid AI or production record was used.
 
-This is a central prerequisite for the salon manager's work inbox, not a new Beauty screen or live release. Named CRM previews, current assignment/line permissions and the manager decision interface remain the next integration step. Beauty 0.44.0 is still the latest packaged source candidate; 0.41.0 remains the last verified live version.
+This preceding increment delivered the central prerequisite only. Beauty 0.45.0 above now connects named CRM previews and manager decisions; production activation remains pending, with 0.41.0 the last verified live version.
 
 ## Daily assistant report and recovery — 0.44.0 candidate
 
