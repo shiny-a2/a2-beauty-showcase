@@ -4,6 +4,14 @@
 
 Release **0.41.0** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
 
+## Shared assistant connection — 0.43.0 candidate
+
+A disabled-by-default connection now lets the existing central A2 agent read a compact summary of Beauty's daily workbench. It reuses the shared SDK, model engine and tool catalogue. Salon identity, staff permissions and an optional CRM line remain controlled by Beauty. The summary includes its source time, exact appointment counts and clearly labelled follow-up previews without customer names or contact details. This connection has no business write tools and does not add a public chat interface.
+
+The Beauty build and 424 tests passed, including local HTTP calls through the actual shared engine and canonical salon reader with scripted model output. The final scope and request-identity checks passed in a focused 12-test integration run. The central platform build, 69 database/contract tests and 13 focused agent tests also passed. A clean production dependency install and packaged-server check succeeded. No paid model or production record was used.
+
+Activation remains pending. Durable whole-request replay, exact production access/budget provisioning and the manager-facing interface are still required. Repeating a request against a changed report returns an explicit conflict instead of silently starting another paid request. The last verified live Beauty version remains 0.41.0; this is published source progress, not a live autonomous assistant.
+
 ## Daily operational workbench — 0.42.0 candidate
 
 Managers and reception can review appointments awaiting a status decision, the rest of today's confirmed agenda and due customer follow-ups in one place. Cards open the existing appointment and CRM workflows. The workbench uses the shared A2 booking and CRM capabilities, respects each person's assigned permissions and keeps line-specific follow-ups within the selected line. It displays a source time and makes limited task previews clear.
