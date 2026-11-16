@@ -4,6 +4,14 @@
 
 Release **0.41.0** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
 
+## AI secretary reliability and operational-agent direction — 0.41.2 candidate
+
+The candidate validates and bounds AI replies before displaying them, rechecks access after a pending request, and preserves specialist review for photo guidance. Failed requests keep their draft and show a useful Persian message. Retrying unchanged text/photo retains the request identity; edited requests get a new identity. Late responses cannot replace a draft after leaving and reopening the panel.
+
+The build and 405 Beauty tests passed. Twenty-eight local browser states covered light/dark mobile/desktop, photo consent, response failures, unchanged/edited retries, review guidance, booking handoff and delayed responses. AI responses were scripted locally; no paid model, external message or production record was used. Production activation remains pending, with 0.41.0 still the last verified deployment.
+
+The next product direction is an operational assistant using the shared A2 Intelligence foundation: current reports, reviewable work proposals, a manager decision inbox and traceable task outcomes. The existing shared-agent candidate needs integration, production entitlement/budget controls and recovery validation before rollout. Broader delegated reception and CRM work is planned; it is not an active autonomous feature. Existing financial permissions and provider activation requirements remain unchanged.
+
 ## Startup reliability — 0.41.1 candidate
 
 Some browsers can advertise first-paint notifications without delivering them, leaving the loading screen visible indefinitely. The candidate adds a bounded fallback shared by application startup and decorative scene scheduling. It preserves the vanity loading animation, reduced motion, retry behavior and existing request count.
