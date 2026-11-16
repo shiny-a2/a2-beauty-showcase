@@ -4,13 +4,19 @@
 
 Release **0.41.0** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
 
+## Reliable assistant report recovery — 0.43.1 candidate
+
+The read-only shared assistant now saves its report and completed answer so an interrupted request can recover the original result. In tested retry and concurrency cases, recovery did not call the model or charge usage again. Current staff access and assistant policy are checked again before delivery; changed requests conflict and expired results cannot reopen a paid operation. This improves the foundation for a useful salon assistant while retaining the existing booking and CRM ownership.
+
+The Beauty build and 424 tests passed; the central build and 75 tests passed, with six final recovery tests also passing after adding access revocation during replay. Checks used real local encrypted storage and usage receipts with scripted model output, including recovery from another process. No paid model or production activation occurred. The shared connection stays disabled pending scoped production provisioning and a manager-facing interface. Recovery for mixed read/write work and uncertain provider outcomes remains open; the last verified live Beauty version is 0.41.0.
+
 ## Shared assistant connection — 0.43.0 candidate
 
 A disabled-by-default connection now lets the existing central A2 agent read a compact summary of Beauty's daily workbench. It reuses the shared SDK, model engine and tool catalogue. Salon identity, staff permissions and an optional CRM line remain controlled by Beauty. The summary includes its source time, exact appointment counts and clearly labelled follow-up previews without customer names or contact details. This connection has no business write tools and does not add a public chat interface.
 
 The Beauty build and 424 tests passed, including local HTTP calls through the actual shared engine and canonical salon reader with scripted model output. The final scope and request-identity checks passed in a focused 12-test integration run. The central platform build, 69 database/contract tests and 13 focused agent tests also passed. A clean production dependency install and packaged-server check succeeded. No paid model or production record was used.
 
-Activation remains pending. Durable whole-request replay, exact production access/budget provisioning and the manager-facing interface are still required. Repeating a request against a changed report returns an explicit conflict instead of silently starting another paid request. The last verified live Beauty version remains 0.41.0; this is published source progress, not a live autonomous assistant.
+At this earlier baseline, activation and durable whole-request replay were pending. Read-only report replay is addressed by 0.43.1 above; exact production access/budget provisioning and the manager-facing interface are still required. At the 0.43.0 baseline, repeating a request against a changed report returned an explicit conflict instead of silently starting another paid request. The last verified live Beauty version remains 0.41.0; this is published source progress, not a live autonomous assistant.
 
 ## Daily operational workbench — 0.42.0 candidate
 
