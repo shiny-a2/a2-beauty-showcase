@@ -4,6 +4,12 @@
 
 Release **0.41.0** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
 
+## Startup reliability — 0.41.1 candidate
+
+Some browsers can advertise first-paint notifications without delivering them, leaving the loading screen visible indefinitely. The candidate adds a bounded fallback shared by application startup and decorative scene scheduling. It preserves the vanity loading animation, reduced motion, retry behavior and existing request count.
+
+The build and all 400 Beauty tests passed. Local browser checks passed 48 timing-failure states and 39 loading/retry states across light/dark themes and mobile/desktop widths. These checks created no live accounts, appointments, payments or messages. Production activation and live verification are pending; the last verified deployed version remains 0.41.0. This patch does not change booking, financial calculations, access rights or provider activation requirements.
+
 ## Lighter startup and a familiar loading scene — 0.41.0
 
 The salon and platform interfaces now load bundled application code and styles. The catalogue's measured JavaScript requests drop from 22 to 3, and stylesheet requests from 7 to 1. Compressed main JavaScript is about 20% smaller, excluding the unchanged 3D scene. These are resource measurements, not a promise of identical speed on every connection or phone.
