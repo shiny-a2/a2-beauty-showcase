@@ -4,6 +4,14 @@
 
 Release **0.41.0** connects customer booking, specialist schedules, reception, salon management, specialist rental accounting and a limited AI secretary for demo customers and the demo salon manager in independent salon workspaces. Beauty uses the shared A2 CRM and loyalty engines for customer relationships and service points.
 
+## Daily operational workbench — 0.42.0 candidate
+
+Managers and reception can review appointments awaiting a status decision, the rest of today's confirmed agenda and due customer follow-ups in one place. Cards open the existing appointment and CRM workflows. The workbench uses the shared A2 booking and CRM capabilities, respects each person's assigned permissions and keeps line-specific follow-ups within the selected line. It displays a source time and makes limited task previews clear.
+
+The build, 412 Beauty tests and 21 shared CRM tests passed. Sixty local interactive browser states covered both themes at mobile and desktop widths, including appointment/customer details, line selection, separate reception permissions, refresh, failed requests and late responses. No external messages, paid AI calls or production records were used. Production activation remains pending; 0.41.0 is still the last verified deployment.
+
+This is a usable operational report and a foundation for the shared assistant. It does not activate autonomous staff work or the generic AI agent. Connecting the central agent to these same authorized reports and reviewable actions remains the next integration step.
+
 ## AI secretary reliability and operational-agent direction — 0.41.2 candidate
 
 The candidate validates and bounds AI replies before displaying them, rechecks access after a pending request, and preserves specialist review for photo guidance. Failed requests keep their draft and show a useful Persian message. Retrying unchanged text/photo retains the request identity; edited requests get a new identity. Late responses cannot replace a draft after leaving and reopening the panel.
